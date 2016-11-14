@@ -4,17 +4,17 @@ defmodule Tox.HtmlDeliveryServiceController do
   alias Tox.HtmlDeliveryService
 
   def index(conn, _params) do
-    deliveryservices = Repo.all(HtmlDeliveryService)
+    deliveryservices = Repo.all(Tox.DeliveryService)
     render(conn, "index.html", deliveryservices: deliveryservices)
   end
 
   def new(conn, _params) do
-    changeset = HtmlDeliveryService.changeset(%HtmlDeliveryService{})
+    changeset = Tox.DeliveryService.changeset(%Tox.DeliveryService{})
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"html_delivery_service" => html_delivery_service_params}) do
-    changeset = HtmlDeliveryService.changeset(%HtmlDeliveryService{}, html_delivery_service_params)
+  def create(conn, %{"delivery_service" => html_delivery_service_params}) do
+    changeset = Tox.DeliveryService.changeset(%Tox.DeliveryService{}, html_delivery_service_params)
 
     case Repo.insert(changeset) do
       {:ok, _html_delivery_service} ->
@@ -27,19 +27,19 @@ defmodule Tox.HtmlDeliveryServiceController do
   end
 
   def show(conn, %{"id" => id}) do
-    html_delivery_service = Repo.get!(HtmlDeliveryService, id)
+    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
     render(conn, "show.html", html_delivery_service: html_delivery_service)
   end
 
   def edit(conn, %{"id" => id}) do
-    html_delivery_service = Repo.get!(HtmlDeliveryService, id)
-    changeset = HtmlDeliveryService.changeset(html_delivery_service)
+    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
+    changeset = Tox.DeliveryService.changeset(html_delivery_service)
     render(conn, "edit.html", html_delivery_service: html_delivery_service, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "html_delivery_service" => html_delivery_service_params}) do
-    html_delivery_service = Repo.get!(HtmlDeliveryService, id)
-    changeset = HtmlDeliveryService.changeset(html_delivery_service, html_delivery_service_params)
+    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
+    changeset = Tox.DeliveryService.changeset(html_delivery_service, html_delivery_service_params)
 
     case Repo.update(changeset) do
       {:ok, html_delivery_service} ->
@@ -52,7 +52,7 @@ defmodule Tox.HtmlDeliveryServiceController do
   end
 
   def delete(conn, %{"id" => id}) do
-    html_delivery_service = Repo.get!(HtmlDeliveryService, id)
+    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).

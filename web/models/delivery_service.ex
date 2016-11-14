@@ -51,6 +51,6 @@ defmodule Tox.DeliveryService do
   def changeset(struct, params \\ %{}) do
     struct
     |> cast(params, [:xml_id, :active, :dscp, :signed, :geo_limit, :html_bypass_fqdn, :dns_bypass_ip, :dns_bypass_ip6, :dns_bypass_ttl, :origin_fqdn, :type, :profile, :cdn_id, :ccr_dns_ttl, :global_max_mbps, :global_max_tps, :long_description, :max_dns_answers, :info_url, :miss_latitude, :miss_longitude, :check_path, :last_updated, :protocol, :ssl_key_version, :ipv6_routing_enabled, :range_request_handling, :edge_header_rewrite, :origin_shield, :mid_header_rewrite, :regex_remap, :cacheurl, :remap_text, :multi_site_origin, :display_name, :tr_response_headers, :initial_dispersion, :dns_bypass_name, :tr_request_headers])
-    |> validate_required([:xml_id, :active, :dscp, :signed, :geo_limit, :html_bypass_fqdn, :dns_bypass_ip, :dns_bypass_ip6, :dns_bypass_ttl, :origin_fqdn, :type, :profile, :cdn_id, :ccr_dns_ttl, :global_max_mbps, :global_max_tps, :long_description, :max_dns_answers, :info_url, :miss_latitude, :miss_longitude, :check_path, :last_updated, :protocol, :ssl_key_version, :ipv6_routing_enabled, :range_request_handling, :edge_header_rewrite, :origin_shield, :mid_header_rewrite, :regex_remap, :cacheurl, :remap_text, :multi_site_origin, :display_name, :tr_response_headers, :initial_dispersion, :dns_bypass_name, :tr_request_headers])
+    |> validate_required([:xml_id])
   end
 end
