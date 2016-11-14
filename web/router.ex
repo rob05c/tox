@@ -18,6 +18,7 @@ defmodule Tox.Router do
 
     get "/", PageController, :index
     resources "/servers", HtmlServerController
+    resources "/deliveryservices", HtmlDeliveryServiceController
   end
 
   # Other scopes may use custom stacks.
@@ -25,5 +26,6 @@ defmodule Tox.Router do
     pipe_through :api
 
     resources "/servers", ServerController, except: [:new, :edit]
+    resources "/deliveryservices", DeliveryServiceController, except: [:new, :edit]
   end
 end

@@ -1,0 +1,245 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :xml_id, class: "control-label" %>
+    <%= text_input f, :xml_id, class: "form-control" %>
+    <%= error_tag f, :xml_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :active, class: "control-label" %>
+    <%= checkbox f, :active, class: "form-control" %>
+    <%= error_tag f, :active %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :dscp, class: "control-label" %>
+    <%= number_input f, :dscp, class: "form-control" %>
+    <%= error_tag f, :dscp %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :signed, class: "control-label" %>
+    <%= checkbox f, :signed, class: "form-control" %>
+    <%= error_tag f, :signed %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :geo_limit, class: "control-label" %>
+    <%= checkbox f, :geo_limit, class: "form-control" %>
+    <%= error_tag f, :geo_limit %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :html_bypass_fqdn, class: "control-label" %>
+    <%= text_input f, :html_bypass_fqdn, class: "form-control" %>
+    <%= error_tag f, :html_bypass_fqdn %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :dns_bypass_ip, class: "control-label" %>
+    <%= text_input f, :dns_bypass_ip, class: "form-control" %>
+    <%= error_tag f, :dns_bypass_ip %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :dns_bypass_ip6, class: "control-label" %>
+    <%= text_input f, :dns_bypass_ip6, class: "form-control" %>
+    <%= error_tag f, :dns_bypass_ip6 %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :dns_bypass_ttl, class: "control-label" %>
+    <%= number_input f, :dns_bypass_ttl, class: "form-control" %>
+    <%= error_tag f, :dns_bypass_ttl %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :origin_fqdn, class: "control-label" %>
+    <%= text_input f, :origin_fqdn, class: "form-control" %>
+    <%= error_tag f, :origin_fqdn %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :type, class: "control-label" %>
+    <%= number_input f, :type, class: "form-control" %>
+    <%= error_tag f, :type %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :profile, class: "control-label" %>
+    <%= number_input f, :profile, class: "form-control" %>
+    <%= error_tag f, :profile %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cdn_id, class: "control-label" %>
+    <%= number_input f, :cdn_id, class: "form-control" %>
+    <%= error_tag f, :cdn_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ccr_dns_ttl, class: "control-label" %>
+    <%= number_input f, :ccr_dns_ttl, class: "form-control" %>
+    <%= error_tag f, :ccr_dns_ttl %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :global_max_mbps, class: "control-label" %>
+    <%= number_input f, :global_max_mbps, class: "form-control" %>
+    <%= error_tag f, :global_max_mbps %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :global_max_tps, class: "control-label" %>
+    <%= number_input f, :global_max_tps, class: "form-control" %>
+    <%= error_tag f, :global_max_tps %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :long_description, class: "control-label" %>
+    <%= text_input f, :long_description, class: "form-control" %>
+    <%= error_tag f, :long_description %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :max_dns_answers, class: "control-label" %>
+    <%= number_input f, :max_dns_answers, class: "form-control" %>
+    <%= error_tag f, :max_dns_answers %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :info_url, class: "control-label" %>
+    <%= text_input f, :info_url, class: "form-control" %>
+    <%= error_tag f, :info_url %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :miss_latitude, class: "control-label" %>
+    <%= number_input f, :miss_latitude, step: "any", class: "form-control" %>
+    <%= error_tag f, :miss_latitude %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :miss_longitude, class: "control-label" %>
+    <%= number_input f, :miss_longitude, step: "any", class: "form-control" %>
+    <%= error_tag f, :miss_longitude %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :check_path, class: "control-label" %>
+    <%= text_input f, :check_path, class: "form-control" %>
+    <%= error_tag f, :check_path %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :last_updated, class: "control-label" %>
+    <%= datetime_select f, :last_updated, class: "form-control" %>
+    <%= error_tag f, :last_updated %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :protocol, class: "control-label" %>
+    <%= number_input f, :protocol, class: "form-control" %>
+    <%= error_tag f, :protocol %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ssl_key_version, class: "control-label" %>
+    <%= number_input f, :ssl_key_version, class: "form-control" %>
+    <%= error_tag f, :ssl_key_version %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ipv6_routing_enabled, class: "control-label" %>
+    <%= checkbox f, :ipv6_routing_enabled, class: "form-control" %>
+    <%= error_tag f, :ipv6_routing_enabled %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :range_request_handling, class: "control-label" %>
+    <%= number_input f, :range_request_handling, class: "form-control" %>
+    <%= error_tag f, :range_request_handling %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :edge_header_rewrite, class: "control-label" %>
+    <%= text_input f, :edge_header_rewrite, class: "form-control" %>
+    <%= error_tag f, :edge_header_rewrite %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :origin_shield, class: "control-label" %>
+    <%= text_input f, :origin_shield, class: "form-control" %>
+    <%= error_tag f, :origin_shield %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :mid_header_rewrite, class: "control-label" %>
+    <%= text_input f, :mid_header_rewrite, class: "form-control" %>
+    <%= error_tag f, :mid_header_rewrite %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :regex_remap, class: "control-label" %>
+    <%= text_input f, :regex_remap, class: "form-control" %>
+    <%= error_tag f, :regex_remap %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cacheurl, class: "control-label" %>
+    <%= text_input f, :cacheurl, class: "form-control" %>
+    <%= error_tag f, :cacheurl %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :remap_text, class: "control-label" %>
+    <%= text_input f, :remap_text, class: "form-control" %>
+    <%= error_tag f, :remap_text %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :multi_site_origin, class: "control-label" %>
+    <%= checkbox f, :multi_site_origin, class: "form-control" %>
+    <%= error_tag f, :multi_site_origin %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :display_name, class: "control-label" %>
+    <%= text_input f, :display_name, class: "form-control" %>
+    <%= error_tag f, :display_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :tr_response_headers, class: "control-label" %>
+    <%= text_input f, :tr_response_headers, class: "form-control" %>
+    <%= error_tag f, :tr_response_headers %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :initial_dispersion, class: "control-label" %>
+    <%= number_input f, :initial_dispersion, class: "form-control" %>
+    <%= error_tag f, :initial_dispersion %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :dns_bypass_name, class: "control-label" %>
+    <%= text_input f, :dns_bypass_name, class: "form-control" %>
+    <%= error_tag f, :dns_bypass_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :tr_request_headers, class: "control-label" %>
+    <%= text_input f, :tr_request_headers, class: "form-control" %>
+    <%= error_tag f, :tr_request_headers %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>
