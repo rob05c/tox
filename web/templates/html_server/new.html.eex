@@ -1,0 +1,6 @@
+<h2>New html server</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_server_path(@conn, :create) %>
+
+<%= link "Back", to: html_server_path(@conn, :index) %>

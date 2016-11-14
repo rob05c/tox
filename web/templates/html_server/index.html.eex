@@ -1,0 +1,84 @@
+<h2>Listing servers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Host name</th>
+      <th>Domain name</th>
+      <th>Tcp port</th>
+      <th>Xmpp</th>
+      <th>Xmpp password</th>
+      <th>Interface name</th>
+      <th>Ip address</th>
+      <th>Ip netmask</th>
+      <th>Ip gateway</th>
+      <th>Ip6 address</th>
+      <th>Ip6 gateway</th>
+      <th>Interface mtu</th>
+      <th>Physical location</th>
+      <th>Rack</th>
+      <th>Cachegroup</th>
+      <th>Type</th>
+      <th>Update pending</th>
+      <th>Profile</th>
+      <th>Cdn</th>
+      <th>Management ip address</th>
+      <th>Management ip netmask</th>
+      <th>Management ip gateway</th>
+      <th>Ilo ip address</th>
+      <th>Ilo ip netmask</th>
+      <th>Ilo ip gateway</th>
+      <th>Ilo username</th>
+      <th>Ilo password</th>
+      <th>Router host name</th>
+      <th>Router port name</th>
+      <th>Last updated</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for html_server <- @servers do %>
+    <tr>
+      <td><%= html_server.host_name %></td>
+      <td><%= html_server.domain_name %></td>
+      <td><%= html_server.tcp_port %></td>
+      <td><%= html_server.xmpp_id %></td>
+      <td><%= html_server.xmpp_password %></td>
+      <td><%= html_server.interface_name %></td>
+      <td><%= html_server.ip_address %></td>
+      <td><%= html_server.ip_netmask %></td>
+      <td><%= html_server.ip_gateway %></td>
+      <td><%= html_server.ip6_address %></td>
+      <td><%= html_server.ip6_gateway %></td>
+      <td><%= html_server.interface_mtu %></td>
+      <td><%= html_server.physical_location %></td>
+      <td><%= html_server.rack %></td>
+      <td><%= html_server.cachegroup %></td>
+      <td><%= html_server.type %></td>
+      <td><%= html_server.update_pending %></td>
+      <td><%= html_server.profile %></td>
+      <td><%= html_server.cdn %></td>
+      <td><%= html_server.management_ip_address %></td>
+      <td><%= html_server.management_ip_netmask %></td>
+      <td><%= html_server.management_ip_gateway %></td>
+      <td><%= html_server.ilo_ip_address %></td>
+      <td><%= html_server.ilo_ip_netmask %></td>
+      <td><%= html_server.ilo_ip_gateway %></td>
+      <td><%= html_server.ilo_username %></td>
+      <td><%= html_server.ilo_password %></td>
+      <td><%= html_server.router_host_name %></td>
+      <td><%= html_server.router_port_name %></td>
+      <td><%= html_server.last_updated %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_server_path(@conn, :show, html_server), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_server_path(@conn, :edit, html_server), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_server_path(@conn, :delete, html_server), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New html server", to: html_server_path(@conn, :new) %>

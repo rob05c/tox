@@ -1,0 +1,191 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :host_name, class: "control-label" %>
+    <%= text_input f, :host_name, class: "form-control" %>
+    <%= error_tag f, :host_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :domain_name, class: "control-label" %>
+    <%= text_input f, :domain_name, class: "form-control" %>
+    <%= error_tag f, :domain_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :tcp_port, class: "control-label" %>
+    <%= number_input f, :tcp_port, class: "form-control" %>
+    <%= error_tag f, :tcp_port %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :xmpp_id, class: "control-label" %>
+    <%= text_input f, :xmpp_id, class: "form-control" %>
+    <%= error_tag f, :xmpp_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :xmpp_password, class: "control-label" %>
+    <%= text_input f, :xmpp_password, class: "form-control" %>
+    <%= error_tag f, :xmpp_password %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :interface_name, class: "control-label" %>
+    <%= text_input f, :interface_name, class: "form-control" %>
+    <%= error_tag f, :interface_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ip_address, class: "control-label" %>
+    <%= text_input f, :ip_address, class: "form-control" %>
+    <%= error_tag f, :ip_address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ip_netmask, class: "control-label" %>
+    <%= text_input f, :ip_netmask, class: "form-control" %>
+    <%= error_tag f, :ip_netmask %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ip_gateway, class: "control-label" %>
+    <%= text_input f, :ip_gateway, class: "form-control" %>
+    <%= error_tag f, :ip_gateway %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ip6_address, class: "control-label" %>
+    <%= text_input f, :ip6_address, class: "form-control" %>
+    <%= error_tag f, :ip6_address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ip6_gateway, class: "control-label" %>
+    <%= text_input f, :ip6_gateway, class: "form-control" %>
+    <%= error_tag f, :ip6_gateway %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :interface_mtu, class: "control-label" %>
+    <%= text_input f, :interface_mtu, class: "form-control" %>
+    <%= error_tag f, :interface_mtu %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :physical_location, class: "control-label" %>
+    <%= number_input f, :physical_location, class: "form-control" %>
+    <%= error_tag f, :physical_location %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :rack, class: "control-label" %>
+    <%= text_input f, :rack, class: "form-control" %>
+    <%= error_tag f, :rack %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cachegroup, class: "control-label" %>
+    <%= number_input f, :cachegroup, class: "form-control" %>
+    <%= error_tag f, :cachegroup %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :type, class: "control-label" %>
+    <%= number_input f, :type, class: "form-control" %>
+    <%= error_tag f, :type %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :update_pending, class: "control-label" %>
+    <%= checkbox f, :update_pending, class: "form-control" %>
+    <%= error_tag f, :update_pending %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :profile, class: "control-label" %>
+    <%= number_input f, :profile, class: "form-control" %>
+    <%= error_tag f, :profile %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :cdn, class: "control-label" %>
+    <%= number_input f, :cdn, class: "form-control" %>
+    <%= error_tag f, :cdn %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :management_ip_address, class: "control-label" %>
+    <%= text_input f, :management_ip_address, class: "form-control" %>
+    <%= error_tag f, :management_ip_address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :management_ip_netmask, class: "control-label" %>
+    <%= text_input f, :management_ip_netmask, class: "form-control" %>
+    <%= error_tag f, :management_ip_netmask %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :management_ip_gateway, class: "control-label" %>
+    <%= text_input f, :management_ip_gateway, class: "form-control" %>
+    <%= error_tag f, :management_ip_gateway %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ilo_ip_address, class: "control-label" %>
+    <%= text_input f, :ilo_ip_address, class: "form-control" %>
+    <%= error_tag f, :ilo_ip_address %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ilo_ip_netmask, class: "control-label" %>
+    <%= text_input f, :ilo_ip_netmask, class: "form-control" %>
+    <%= error_tag f, :ilo_ip_netmask %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ilo_ip_gateway, class: "control-label" %>
+    <%= text_input f, :ilo_ip_gateway, class: "form-control" %>
+    <%= error_tag f, :ilo_ip_gateway %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ilo_username, class: "control-label" %>
+    <%= text_input f, :ilo_username, class: "form-control" %>
+    <%= error_tag f, :ilo_username %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :ilo_password, class: "control-label" %>
+    <%= text_input f, :ilo_password, class: "form-control" %>
+    <%= error_tag f, :ilo_password %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :router_host_name, class: "control-label" %>
+    <%= text_input f, :router_host_name, class: "form-control" %>
+    <%= error_tag f, :router_host_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :router_port_name, class: "control-label" %>
+    <%= text_input f, :router_port_name, class: "form-control" %>
+    <%= error_tag f, :router_port_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :last_updated, class: "control-label" %>
+    <%= datetime_select f, :last_updated, class: "form-control" %>
+    <%= error_tag f, :last_updated %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

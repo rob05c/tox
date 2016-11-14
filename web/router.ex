@@ -17,10 +17,13 @@ defmodule Tox.Router do
     pipe_through :browser # Use the default browser stack
 
     get "/", PageController, :index
+    resources "/servers", HtmlServerController
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", Tox do
-  #   pipe_through :api
-  # end
+  scope "/api", Tox do
+    pipe_through :api
+
+    resources "/servers", ServerController, except: [:new, :edit]
+  end
 end
