@@ -2,6 +2,8 @@
 
 Experimental Traffic Ops rewrite in Elixir Phoenix
 
+This project is a derivative work of Apache Traffic Control, which is Licensed under the Apache License, Version 2.0. See https://github.com/apache/incubator-trafficcontrol
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
