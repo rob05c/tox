@@ -44,7 +44,7 @@ defmodule Tox.HtmlServerController do
     case Repo.update(changeset) do
       {:ok, html_server} ->
         conn
-        |> put_flash(:info, "Html server updated successfully.")
+        |> put_flash(:info, "Server updated successfully.")
         |> redirect(to: html_server_path(conn, :show, html_server))
       {:error, changeset} ->
         render(conn, "edit.html", html_server: html_server, changeset: changeset)

@@ -19,7 +19,7 @@ defmodule Tox.HtmlDeliveryServiceController do
     case Repo.insert(changeset) do
       {:ok, _html_delivery_service} ->
         conn
-        |> put_flash(:info, "Html delivery service created successfully.")
+        |> put_flash(:info, "Delivery service created successfully.")
         |> redirect(to: html_delivery_service_path(conn, :index))
       {:error, changeset} ->
         render(conn, "new.html", changeset: changeset)
@@ -44,7 +44,7 @@ defmodule Tox.HtmlDeliveryServiceController do
     case Repo.update(changeset) do
       {:ok, html_delivery_service} ->
         conn
-        |> put_flash(:info, "Html delivery service updated successfully.")
+        |> put_flash(:info, "Delivery service updated successfully.")
         |> redirect(to: html_delivery_service_path(conn, :show, html_delivery_service))
       {:error, changeset} ->
         render(conn, "edit.html", html_delivery_service: html_delivery_service, changeset: changeset)
@@ -59,7 +59,7 @@ defmodule Tox.HtmlDeliveryServiceController do
     Repo.delete!(html_delivery_service)
 
     conn
-    |> put_flash(:info, "Html delivery service deleted successfully.")
+    |> put_flash(:info, "delivery service deleted successfully.")
     |> redirect(to: html_delivery_service_path(conn, :index))
   end
 end
