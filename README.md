@@ -22,6 +22,28 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
   * Mailing list: http://groups.google.com/group/phoenix-talk
   * Source: https://github.com/phoenixframework/phoenix
 
+## Creation
+
+To re-create this experiment, install Phoenix and create a new project, then follow the Adding Models instructions.
+
+`wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb`
+
+`sudo apt-get update`
+
+`sudo apt-get install esl-erlang`
+
+`sudo apt-get install elixir`
+
+`mix archive.install https://github.com/phoenixframework/archives/raw/master/phoenix_new.ez`
+
+`mix local.hex`
+
+`mix deps.get`
+
+`mix ecto.create && mix ecto.migrate`
+
+`mix phoenix.server`
+
 ## Adding Models
 
 We typically want both HTML and JSON endpoints for any new model (SQL table). Phoenix' generators don't directly support this, so we have to modify the generated files a bit.
