@@ -1,84 +1,134 @@
-<h2>Listing servers</h2>
-
-<table class="table">
-  <thead>
-    <tr>
-      <th>Host name</th>
-      <th>Domain name</th>
-      <th>Tcp port</th>
-      <th>Xmpp</th>
-      <th>Xmpp password</th>
-      <th>Interface name</th>
-      <th>Ip address</th>
-      <th>Ip netmask</th>
-      <th>Ip gateway</th>
-      <th>Ip6 address</th>
-      <th>Ip6 gateway</th>
-      <th>Interface mtu</th>
-      <th>Physical location</th>
-      <th>Rack</th>
-      <th>Cachegroup</th>
-      <th>Type</th>
-      <th>Update pending</th>
-      <th>Profile</th>
-      <th>Cdn</th>
-      <th>Management ip address</th>
-      <th>Management ip netmask</th>
-      <th>Management ip gateway</th>
-      <th>Ilo ip address</th>
-      <th>Ilo ip netmask</th>
-      <th>Ilo ip gateway</th>
-      <th>Ilo username</th>
-      <th>Ilo password</th>
-      <th>Router host name</th>
-      <th>Router port name</th>
-      <th>Last updated</th>
-
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
 <%= for html_server <- @servers do %>
-    <tr>
-      <td><%= html_server.host_name %></td>
-      <td><%= html_server.domain_name %></td>
-      <td><%= html_server.tcp_port %></td>
-      <td><%= html_server.xmpp_id %></td>
-      <td><%= html_server.xmpp_password %></td>
-      <td><%= html_server.interface_name %></td>
-      <td><%= html_server.ip_address %></td>
-      <td><%= html_server.ip_netmask %></td>
-      <td><%= html_server.ip_gateway %></td>
-      <td><%= html_server.ip6_address %></td>
-      <td><%= html_server.ip6_gateway %></td>
-      <td><%= html_server.interface_mtu %></td>
-      <td><%= html_server.physical_location %></td>
-      <td><%= html_server.rack %></td>
-      <td><%= html_server.cachegroup %></td>
-      <td><%= html_server.type %></td>
-      <td><%= html_server.update_pending %></td>
-      <td><%= html_server.profile %></td>
-      <td><%= html_server.cdn %></td>
-      <td><%= html_server.management_ip_address %></td>
-      <td><%= html_server.management_ip_netmask %></td>
-      <td><%= html_server.management_ip_gateway %></td>
-      <td><%= html_server.ilo_ip_address %></td>
-      <td><%= html_server.ilo_ip_netmask %></td>
-      <td><%= html_server.ilo_ip_gateway %></td>
-      <td><%= html_server.ilo_username %></td>
-      <td><%= html_server.ilo_password %></td>
-      <td><%= html_server.router_host_name %></td>
-      <td><%= html_server.router_port_name %></td>
-      <td><%= html_server.last_updated %></td>
+      <div class="mui-panel">
+        <form class="mui-form--inline">
+          <legend><%= html_server.host_name %></legend>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.host_name %>" readonly="readonly">
+            <label>Host</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.domain_name %>" readonly="readonly">
+            <label>Domain</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="number" min="0" max="65535" value="<%= html_server.tcp_port %>" readonly="readonly">
+            <label>Port</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.interface_name %>" readonly="readonly">
+            <label>Interface Name</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.interface_mtu %>" readonly="readonly">
+            <label>Interface MTU</label>
+          </div>
+          <br />
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ip_address %>" readonly="readonly">
+            <label>IPv4 Address</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="255.255.255.42" readonly="readonly">
+            <label>IPv4 Gateway</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ip6_address %>" readonly="readonly">
+            <label>IPv6 Address</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ip6_gateway %>" readonly="readonly">
+            <label>IPv6 Gateway</label>
+          </div>
+          <br/>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.physical_location %>" readonly="readonly">
+            <label>Physical Location</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.rack %>" readonly="readonly">
+            <label>Rack</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.cachegroup %>" readonly="readonly">
+            <label>Cachegroup</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.type %>" readonly="readonly">
+            <label>Type</label>
+          </div>
+          <br/>
+          <div class="mui-textfield">
+            <input type="text" value="REPORTED" readonly="readonly">
+            <label>Status</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.update_pending %>" readonly="readonly">
+            <label>Update Pending</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.profile %>" readonly="readonly">
+            <label>Profile</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.cdn %>" readonly="readonly">
+            <label>CDN</label>
+          </div>
+          <br/>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ilo_ip_address %>" readonly="readonly">
+            <label>ILO IP Address</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ilo_ip_gateway %>" readonly="readonly">
+            <label>ILO Gateway</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ilo_username %>" readonly="readonly">
+            <label>ILO Username</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.ilo_password %>" readonly="readonly">
+            <label>ILO Password</label>
+          </div>
+          <br/>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.xmpp_id %>" readonly="readonly">
+            <label>XMPP ID</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.xmpp_password %>" readonly="readonly">
+            <label>XMPP Password</label>
+          </div>
+          <br />
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.management_ip_address %>" readonly="readonly">
+            <label>Management IP Address</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.management_ip_gateway %>" readonly="readonly">
+            <label>Management IP Gateway</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.router_host_name %>" readonly="readonly">
+            <label>Router Hostname</label>
+          </div>
+          <div class="mui-textfield">
+            <input type="text" value="<%= html_server.router_port_name %>" readonly="readonly">
+            <label>Router Port</label>
+          </div>
 
-      <td class="text-right">
-        <%= link "Show", to: html_server_path(@conn, :show, html_server), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: html_server_path(@conn, :edit, html_server), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: html_server_path(@conn, :delete, html_server), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
-      </td>
-    </tr>
+          <button class="mui-btn mui-btn--raised mui--pull-right">Edit</button>
+          <button type="submit" class="mui-btn mui-btn--raised mui--pull-right" style="display:none">Save</button>
+        </form>
+
+
+        <td class="text-right">
+          <%= link "Show", to: html_server_path(@conn, :show, html_server), class: "btn btn-default btn-xs" %>
+          <%= link "Edit", to: html_server_path(@conn, :edit, html_server), class: "btn btn-default btn-xs" %>
+          <%= link "Delete", to: html_server_path(@conn, :delete, html_server), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+        </td>
+
+      </div>
 <% end %>
-  </tbody>
-</table>
 
-<%= link "New html server", to: html_server_path(@conn, :new) %>
+        <a class="mui-btn mui-btn--raised mui-btn--primary mui--pull-right" href="<%= html_server_path(@conn, :new) %>">New</a>

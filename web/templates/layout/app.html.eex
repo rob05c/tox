@@ -1,35 +1,121 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
   <head>
+    <title>Traffic Ops</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
 
-    <title>Hello Tox!</title>
+    <link href="/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <link href="/css/server.css" rel="stylesheet" type="text/css" />
+    <script src="/js/mui.min.js"></script>
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/js/server.js"></script>
     <link rel="stylesheet" href="<%= static_path(@conn, "/css/app.css") %>">
-  </head>
-
-  <body>
-    <div class="container">
-      <header class="header">
-        <nav role="navigation">
-          <ul class="nav nav-pills pull-right">
-            <li><a href="http://www.phoenixframework.org/docs">Get Started</a></li>
-          </ul>
-        </nav>
-        <span class="logo"></span>
-      </header>
-
-      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
-      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
-
-      <main role="main">
-        <%= render @view_module, @view_template, assigns %>
-      </main>
-
-    </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
+  </head>
+  <body>
+    <div id="sidedrawer" class="mui--no-user-select">
+      <div class="mui-divider"></div>
+      <ul>
+        <li>
+          <strong>Health</strong>
+          <ul>
+            <li><a href="#">Table View</a></li>
+            <li><a href="#">Server Checks</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Servers</strong>
+          <ul>
+            <li><a href="/servers">All</a></li>
+            <li><a href="#">Upload CSV</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Delivery Services</strong>
+          <ul>
+            <li><a href="/deliveryservices">All</a></li>
+            <li><a href="#">Federations</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Parameters</strong>
+          <ul>
+            <li><a href="#">Global Profile</a></li>
+            <li><a href="#">All Cache Groups</a></li>
+            <li><a href="#">All Profile</a></li>
+            <li><a href="#">Select Profile</a></li>
+            <li><a href="#">Orphaned Parameters</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Tools</strong>
+          <ul>
+            <li><a href="#">Generate ISO</a></li>
+            <li><a href="#">Queue Updates</a></li>
+            <li><a href="#">DB Dump</a></li>
+            <li><a href="#">Snapshot CRConfig</a></li>
+            <li><a href="#">Invalidate Content</a></li>
+            <li><a href="#">Manage DNSSec Keys</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong>Misc</strong>
+          <ul>
+            <li><a href="#">Cache Groups</a></li>
+            <li><a href="#">Users</a></li>
+            <li><a href="#">Profiles</a></li>
+            <li><a href="#">Networks (ASNs)</a></li>
+            <li><a href="#">Hardware</a></li>
+            <li><a href="#">Data Types</a></li>
+            <li><a href="#">Divisions</a></li>
+            <li><a href="#">Regions</a></li>
+            <li><a href="#">Physical Locations</a></li>
+          </ul>
+        </li>
+        <li>
+          <strong><a href="#">Changelog</a></strong>
+        </li>
+        <li>
+          <strong>Help</strong>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Release Notes</a></li>
+            <li><a href="#">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <header id="header">
+      <div class="mui-appbar mui--appbar-line-height">
+        <div class="mui-container-fluid">
+          <a class="sidedrawer-toggle mui--visible-xs-inline-block mui--visible-sm-inline-block js-show-sidedrawer">☰</a>
+          <a class="sidedrawer-toggle mui--hidden-xs mui--hidden-sm js-hide-sidedrawer">☰</a>
+          <span class="mui--text-title">Traffic Ops</span>
+        </div>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="mui--appbar-height"></div>
+      <br />
+      <div class="mui-container-fluid">
+        <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+        <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+
+        <%= render @view_module, @view_template, assigns %>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="mui-container-fluid mui--pull-right">
+        <br>
+        Powered By
+        <a href="https://www.elixir-lang.org"><img src="/images/elixir-logo.png" alt="Elixir" style="width:32px;height:32px;"></a>
+        <a href="https://www.phoenixframework.org"><img src="/images/phoenix-logo.png" alt="Phoenix" style="width:32px;height:32px;"></a>
+        <a href="https://www.muicss.com"><img src="/images/mui-logo.png" alt="MUI" style="width:32px;height:32px;"></a>
+      </div>
+    </footer>
   </body>
 </html>

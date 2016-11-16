@@ -1,6 +1,6 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}", name: "Phoenix!" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <h2><%= gettext "Welcome to %{name}", name: "Traffic Ops" %></h2>
+  <p class="lead">Click the navigation links at the side for more info.</p>
 </div>
 
 <div class="row marketing">
@@ -8,13 +8,10 @@
     <h4>Resources</h4>
     <ul>
       <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
+        <a href="http://traffic-control-cdn.net">Docs</a>
       </li>
       <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
+        <a href="https://github.com/apache/incubator-trafficcontrol">Source</a>
       </li>
     </ul>
   </div>
@@ -23,13 +20,10 @@
     <h4>Help</h4>
     <ul>
       <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
+        <a href="https://groups.google.com/forum/#!topic/traffic_control/EVUsle-giUY">Mailing list</a>
       </li>
       <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdLAPlFiHzphKOgy1XFiS-qLWLLrzHKr_hZYENWmor9DwI1Gw/viewform">Slack</a>
       </li>
     </ul>
   </div>

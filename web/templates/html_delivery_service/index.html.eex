@@ -99,4 +99,4 @@
   </tbody>
 </table>
 
-<%= link "New html delivery service", to: html_delivery_service_path(@conn, :new) %>
+<%= link "New delivery service", to: html_delivery_service_path(@conn, :new) %>
