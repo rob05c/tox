@@ -1,6 +1,4 @@
 defmodule Tox.ServerController do
-  require Logger
-
   use Tox.Web, :controller
 
   alias Tox.Server
@@ -11,7 +9,6 @@ defmodule Tox.ServerController do
   end
 
   def create(conn, %{"server" => server_params}) do
-    Logger.info  "Server.create called!"
     changeset = Server.changeset(%Server{}, server_params)
 
     case Repo.insert(changeset) do
