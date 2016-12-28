@@ -12,9 +12,9 @@ defmodule Tox.User do
   @doc """
   Builds a changeset based on the `struct` and `params`.
   """
-  def changeset(struct, params \\ %{}) do
-    struct
-    |> cast(params, [:email, :password_hash])
-    |> validate_required([:email, :password_hash])
+  def changeset(model, params \\ :empty) do
+    model
+    |> cast(params, ~w(email), [])
+    |> validate_format(:email, ~r/@/)
   end
 end
