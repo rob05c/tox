@@ -102,3 +102,10 @@ Following are the commands which were run to generate JSON and HTML, and the nec
 `curl localhost:4000/api/deliveryservices?format=json`
 
 `curl -H "Content-Type: application/json" localhost:4000/api/deliveryservices`
+
+### Auth
+
+`mix phoenix.gen.model User users email:string password_hash:string`
+
+`mix ecto.migrate`
+
