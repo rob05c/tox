@@ -19,6 +19,7 @@ defmodule Tox.Router do
     get "/", PageController, :index
     resources "/servers", HtmlServerController
     resources "/deliveryservices", HtmlDeliveryServiceController
+    resources "/users", UserController
   end
 
   # Other scopes may use custom stacks.

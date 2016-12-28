@@ -109,3 +109,5 @@ Following are the commands which were run to generate JSON and HTML, and the nec
 
 `mix ecto.migrate`
 
+* in `/web/models/user.ex` add `field :password, :string, virtual: true` to `schema “users” do`
+
