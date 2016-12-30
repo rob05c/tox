@@ -25,3 +25,12 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+config :guardian, Guardian,
+  allowed_algos: ["HS512"], # optional
+  verify_module: Guardian.JWT,  # optional
+  issuer: "Tox",
+  ttl: { 30, :days },
+  verify_issuer: true, # optional
+  serializer: Tox.GuardianSerializer,
+  secret_key: "A99CAEEA-0AC0-4DCC-9859-247D03C5D6CB"

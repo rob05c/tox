@@ -52,6 +52,7 @@ defmodule Tox.Web do
       import Tox.Router.Helpers
       import Tox.ErrorHelpers
       import Tox.Gettext
+      import Tox.ViewHelper
     end
   end
 
