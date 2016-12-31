@@ -1,10 +1,22 @@
 defmodule Tox.HtmlServerController do
+  require Logger
   use Tox.Web, :controller
 
   alias Tox.HtmlServer
 
   def index(conn, _params) do
-    servers = Repo.all(Tox.Server)
+    user = Guardian.Plug.current_resource(conn)
+    servers =
+      case user.role do
+        r when r == "super_admin" or r == "ops_admin" or r == "ops_readonly" ->
+          Repo.all(Tox.Server)
+        r when r == "tenant_admin" or r == "tenant_readonly" ->
+          # \todo hide Servers from Tenants in layout
+          [] # Tenants aren't allowed to see Servers
+        _ ->
+          Logger.warn "User " <> user.email <> " invalid role " <> user.role
+          []
+      end
     render(conn, "index.html", servers: servers)
   end
 
