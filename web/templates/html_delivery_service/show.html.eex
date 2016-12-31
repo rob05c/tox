@@ -4,200 +4,200 @@
 
   <li>
     <strong>Xml:</strong>
-    <%= @html_delivery_service.xml_id %>
+    <%= @delivery_service.xml_id %>
   </li>
 
   <li>
     <strong>Active:</strong>
-    <%= @html_delivery_service.active %>
+    <%= @delivery_service.active %>
   </li>
 
   <li>
     <strong>Dscp:</strong>
-    <%= @html_delivery_service.dscp %>
+    <%= @delivery_service.dscp %>
   </li>
 
   <li>
     <strong>Signed:</strong>
-    <%= @html_delivery_service.signed %>
+    <%= @delivery_service.signed %>
   </li>
 
   <li>
     <strong>Geo limit:</strong>
-    <%= @html_delivery_service.geo_limit %>
+    <%= @delivery_service.geo_limit %>
   </li>
 
   <li>
     <strong>Html bypass fqdn:</strong>
-    <%= @html_delivery_service.html_bypass_fqdn %>
+    <%= @delivery_service.html_bypass_fqdn %>
   </li>
 
   <li>
     <strong>Dns bypass ip:</strong>
-    <%= @html_delivery_service.dns_bypass_ip %>
+    <%= @delivery_service.dns_bypass_ip %>
   </li>
 
   <li>
     <strong>Dns bypass ip6:</strong>
-    <%= @html_delivery_service.dns_bypass_ip6 %>
+    <%= @delivery_service.dns_bypass_ip6 %>
   </li>
 
   <li>
     <strong>Dns bypass ttl:</strong>
-    <%= @html_delivery_service.dns_bypass_ttl %>
+    <%= @delivery_service.dns_bypass_ttl %>
   </li>
 
   <li>
     <strong>Origin fqdn:</strong>
-    <%= @html_delivery_service.origin_fqdn %>
+    <%= @delivery_service.origin_fqdn %>
   </li>
 
   <li>
     <strong>Type:</strong>
-    <%= @html_delivery_service.type %>
+    <%= @delivery_service.type %>
   </li>
 
   <li>
     <strong>Profile:</strong>
-    <%= @html_delivery_service.profile %>
+    <%= @delivery_service.profile %>
   </li>
 
   <li>
     <strong>Cdn:</strong>
-    <%= @html_delivery_service.cdn_id %>
+    <%= @delivery_service.cdn_id %>
   </li>
 
   <li>
     <strong>Ccr dns ttl:</strong>
-    <%= @html_delivery_service.ccr_dns_ttl %>
+    <%= @delivery_service.ccr_dns_ttl %>
   </li>
 
   <li>
     <strong>Global max mbps:</strong>
-    <%= @html_delivery_service.global_max_mbps %>
+    <%= @delivery_service.global_max_mbps %>
   </li>
 
   <li>
     <strong>Global max tps:</strong>
-    <%= @html_delivery_service.global_max_tps %>
+    <%= @delivery_service.global_max_tps %>
   </li>
 
   <li>
     <strong>Long description:</strong>
-    <%= @html_delivery_service.long_description %>
+    <%= @delivery_service.long_description %>
   </li>
 
   <li>
     <strong>Max dns answers:</strong>
-    <%= @html_delivery_service.max_dns_answers %>
+    <%= @delivery_service.max_dns_answers %>
   </li>
 
   <li>
     <strong>Info url:</strong>
-    <%= @html_delivery_service.info_url %>
+    <%= @delivery_service.info_url %>
   </li>
 
   <li>
     <strong>Miss latitude:</strong>
-    <%= @html_delivery_service.miss_latitude %>
+    <%= @delivery_service.miss_latitude %>
   </li>
 
   <li>
     <strong>Miss longitude:</strong>
-    <%= @html_delivery_service.miss_longitude %>
+    <%= @delivery_service.miss_longitude %>
   </li>
 
   <li>
     <strong>Check path:</strong>
-    <%= @html_delivery_service.check_path %>
+    <%= @delivery_service.check_path %>
   </li>
 
   <li>
     <strong>Last updated:</strong>
-    <%= @html_delivery_service.last_updated %>
+    <%= @delivery_service.last_updated %>
   </li>
 
   <li>
     <strong>Protocol:</strong>
-    <%= @html_delivery_service.protocol %>
+    <%= @delivery_service.protocol %>
   </li>
 
   <li>
     <strong>Ssl key version:</strong>
-    <%= @html_delivery_service.ssl_key_version %>
+    <%= @delivery_service.ssl_key_version %>
   </li>
 
   <li>
     <strong>Ipv6 routing enabled:</strong>
-    <%= @html_delivery_service.ipv6_routing_enabled %>
+    <%= @delivery_service.ipv6_routing_enabled %>
   </li>
 
   <li>
     <strong>Range request handling:</strong>
-    <%= @html_delivery_service.range_request_handling %>
+    <%= @delivery_service.range_request_handling %>
   </li>
 
   <li>
     <strong>Edge header rewrite:</strong>
-    <%= @html_delivery_service.edge_header_rewrite %>
+    <%= @delivery_service.edge_header_rewrite %>
   </li>
 
   <li>
     <strong>Origin shield:</strong>
-    <%= @html_delivery_service.origin_shield %>
+    <%= @delivery_service.origin_shield %>
   </li>
 
   <li>
     <strong>Mid header rewrite:</strong>
-    <%= @html_delivery_service.mid_header_rewrite %>
+    <%= @delivery_service.mid_header_rewrite %>
   </li>
 
   <li>
     <strong>Regex remap:</strong>
-    <%= @html_delivery_service.regex_remap %>
+    <%= @delivery_service.regex_remap %>
   </li>
 
   <li>
     <strong>Cacheurl:</strong>
-    <%= @html_delivery_service.cacheurl %>
+    <%= @delivery_service.cacheurl %>
   </li>
 
   <li>
     <strong>Remap text:</strong>
-    <%= @html_delivery_service.remap_text %>
+    <%= @delivery_service.remap_text %>
   </li>
 
   <li>
     <strong>Multi site origin:</strong>
-    <%= @html_delivery_service.multi_site_origin %>
+    <%= @delivery_service.multi_site_origin %>
   </li>
 
   <li>
     <strong>Display name:</strong>
-    <%= @html_delivery_service.display_name %>
+    <%= @delivery_service.display_name %>
   </li>
 
   <li>
     <strong>Tr response headers:</strong>
-    <%= @html_delivery_service.tr_response_headers %>
+    <%= @delivery_service.tr_response_headers %>
   </li>
 
   <li>
     <strong>Initial dispersion:</strong>
-    <%= @html_delivery_service.initial_dispersion %>
+    <%= @delivery_service.initial_dispersion %>
   </li>
 
   <li>
     <strong>Dns bypass name:</strong>
-    <%= @html_delivery_service.dns_bypass_name %>
+    <%= @delivery_service.dns_bypass_name %>
   </li>
 
   <li>
     <strong>Tr request headers:</strong>
-    <%= @html_delivery_service.tr_request_headers %>
+    <%= @delivery_service.tr_request_headers %>
   </li>
 
 </ul>
 
-<%= link "Edit", to: html_delivery_service_path(@conn, :edit, @html_delivery_service) %>
+<%= link "Edit", to: html_delivery_service_path(@conn, :edit, @delivery_service) %>
 <%= link "Back", to: html_delivery_service_path(@conn, :index) %>

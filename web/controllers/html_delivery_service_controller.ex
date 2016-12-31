@@ -13,11 +13,11 @@ defmodule Tox.HtmlDeliveryServiceController do
     render(conn, "new.html", changeset: changeset)
   end
 
-  def create(conn, %{"delivery_service" => html_delivery_service_params}) do
-    changeset = Tox.DeliveryService.changeset(%Tox.DeliveryService{}, html_delivery_service_params)
+  def create(conn, %{"delivery_service" => delivery_service_params}) do
+    changeset = Tox.DeliveryService.changeset(%Tox.DeliveryService{}, delivery_service_params)
 
     case Repo.insert(changeset) do
-      {:ok, _html_delivery_service} ->
+      {:ok, _delivery_service} ->
         conn
         |> put_flash(:info, "Delivery service created successfully.")
         |> redirect(to: html_delivery_service_path(conn, :index))
@@ -27,36 +27,36 @@ defmodule Tox.HtmlDeliveryServiceController do
   end
 
   def show(conn, %{"id" => id}) do
-    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
-    render(conn, "show.html", html_delivery_service: html_delivery_service)
+    delivery_service = Repo.get!(Tox.DeliveryService, id)
+    render(conn, "show.html", delivery_service: delivery_service)
   end
 
   def edit(conn, %{"id" => id}) do
-    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
-    changeset = Tox.DeliveryService.changeset(html_delivery_service)
-    render(conn, "edit.html", html_delivery_service: html_delivery_service, changeset: changeset)
+    delivery_service = Repo.get!(Tox.DeliveryService, id)
+    changeset = Tox.DeliveryService.changeset(delivery_service)
+    render(conn, "edit.html", delivery_service: delivery_service, changeset: changeset)
   end
 
-  def update(conn, %{"id" => id, "html_delivery_service" => html_delivery_service_params}) do
-    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
-    changeset = Tox.DeliveryService.changeset(html_delivery_service, html_delivery_service_params)
+  def update(conn, %{"id" => id, "delivery_service" => delivery_service_params}) do
+    delivery_service = Repo.get!(Tox.DeliveryService, id)
+    changeset = Tox.DeliveryService.changeset(delivery_service, delivery_service_params)
 
     case Repo.update(changeset) do
-      {:ok, html_delivery_service} ->
+      {:ok, delivery_service} ->
         conn
         |> put_flash(:info, "Delivery service updated successfully.")
-        |> redirect(to: html_delivery_service_path(conn, :show, html_delivery_service))
+        |> redirect(to: html_delivery_service_path(conn, :show, delivery_service))
       {:error, changeset} ->
-        render(conn, "edit.html", html_delivery_service: html_delivery_service, changeset: changeset)
+        render(conn, "edit.html", delivery_service: delivery_service, changeset: changeset)
     end
   end
 
   def delete(conn, %{"id" => id}) do
-    html_delivery_service = Repo.get!(Tox.DeliveryService, id)
+    delivery_service = Repo.get!(Tox.DeliveryService, id)
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).
-    Repo.delete!(html_delivery_service)
+    Repo.delete!(delivery_service)
 
     conn
     |> put_flash(:info, "delivery service deleted successfully.")

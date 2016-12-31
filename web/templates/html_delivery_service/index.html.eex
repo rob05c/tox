@@ -47,52 +47,52 @@
     </tr>
   </thead>
   <tbody>
-<%= for html_delivery_service <- @deliveryservices do %>
+<%= for delivery_service <- @deliveryservices do %>
     <tr>
-      <td><%= html_delivery_service.xml_id %></td>
-      <td><%= html_delivery_service.active %></td>
-      <td><%= html_delivery_service.dscp %></td>
-      <td><%= html_delivery_service.signed %></td>
-      <td><%= html_delivery_service.geo_limit %></td>
-      <td><%= html_delivery_service.html_bypass_fqdn %></td>
-      <td><%= html_delivery_service.dns_bypass_ip %></td>
-      <td><%= html_delivery_service.dns_bypass_ip6 %></td>
-      <td><%= html_delivery_service.dns_bypass_ttl %></td>
-      <td><%= html_delivery_service.origin_fqdn %></td>
-      <td><%= html_delivery_service.type %></td>
-      <td><%= html_delivery_service.profile %></td>
-      <td><%= html_delivery_service.cdn_id %></td>
-      <td><%= html_delivery_service.ccr_dns_ttl %></td>
-      <td><%= html_delivery_service.global_max_mbps %></td>
-      <td><%= html_delivery_service.global_max_tps %></td>
-      <td><%= html_delivery_service.long_description %></td>
-      <td><%= html_delivery_service.max_dns_answers %></td>
-      <td><%= html_delivery_service.info_url %></td>
-      <td><%= html_delivery_service.miss_latitude %></td>
-      <td><%= html_delivery_service.miss_longitude %></td>
-      <td><%= html_delivery_service.check_path %></td>
-      <td><%= html_delivery_service.last_updated %></td>
-      <td><%= html_delivery_service.protocol %></td>
-      <td><%= html_delivery_service.ssl_key_version %></td>
-      <td><%= html_delivery_service.ipv6_routing_enabled %></td>
-      <td><%= html_delivery_service.range_request_handling %></td>
-      <td><%= html_delivery_service.edge_header_rewrite %></td>
-      <td><%= html_delivery_service.origin_shield %></td>
-      <td><%= html_delivery_service.mid_header_rewrite %></td>
-      <td><%= html_delivery_service.regex_remap %></td>
-      <td><%= html_delivery_service.cacheurl %></td>
-      <td><%= html_delivery_service.remap_text %></td>
-      <td><%= html_delivery_service.multi_site_origin %></td>
-      <td><%= html_delivery_service.display_name %></td>
-      <td><%= html_delivery_service.tr_response_headers %></td>
-      <td><%= html_delivery_service.initial_dispersion %></td>
-      <td><%= html_delivery_service.dns_bypass_name %></td>
-      <td><%= html_delivery_service.tr_request_headers %></td>
+      <td><%= delivery_service.xml_id %></td>
+      <td><%= delivery_service.active %></td>
+      <td><%= delivery_service.dscp %></td>
+      <td><%= delivery_service.signed %></td>
+      <td><%= delivery_service.geo_limit %></td>
+      <td><%= delivery_service.html_bypass_fqdn %></td>
+      <td><%= delivery_service.dns_bypass_ip %></td>
+      <td><%= delivery_service.dns_bypass_ip6 %></td>
+      <td><%= delivery_service.dns_bypass_ttl %></td>
+      <td><%= delivery_service.origin_fqdn %></td>
+      <td><%= delivery_service.type %></td>
+      <td><%= delivery_service.profile %></td>
+      <td><%= delivery_service.cdn_id %></td>
+      <td><%= delivery_service.ccr_dns_ttl %></td>
+      <td><%= delivery_service.global_max_mbps %></td>
+      <td><%= delivery_service.global_max_tps %></td>
+      <td><%= delivery_service.long_description %></td>
+      <td><%= delivery_service.max_dns_answers %></td>
+      <td><%= delivery_service.info_url %></td>
+      <td><%= delivery_service.miss_latitude %></td>
+      <td><%= delivery_service.miss_longitude %></td>
+      <td><%= delivery_service.check_path %></td>
+      <td><%= delivery_service.last_updated %></td>
+      <td><%= delivery_service.protocol %></td>
+      <td><%= delivery_service.ssl_key_version %></td>
+      <td><%= delivery_service.ipv6_routing_enabled %></td>
+      <td><%= delivery_service.range_request_handling %></td>
+      <td><%= delivery_service.edge_header_rewrite %></td>
+      <td><%= delivery_service.origin_shield %></td>
+      <td><%= delivery_service.mid_header_rewrite %></td>
+      <td><%= delivery_service.regex_remap %></td>
+      <td><%= delivery_service.cacheurl %></td>
+      <td><%= delivery_service.remap_text %></td>
+      <td><%= delivery_service.multi_site_origin %></td>
+      <td><%= delivery_service.display_name %></td>
+      <td><%= delivery_service.tr_response_headers %></td>
+      <td><%= delivery_service.initial_dispersion %></td>
+      <td><%= delivery_service.dns_bypass_name %></td>
+      <td><%= delivery_service.tr_request_headers %></td>
 
       <td class="text-right">
-        <%= link "Show", to: html_delivery_service_path(@conn, :show, html_delivery_service), class: "btn btn-default btn-xs" %>
-        <%= link "Edit", to: html_delivery_service_path(@conn, :edit, html_delivery_service), class: "btn btn-default btn-xs" %>
-        <%= link "Delete", to: html_delivery_service_path(@conn, :delete, html_delivery_service), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+        <%= link "Show", to: html_delivery_service_path(@conn, :show, delivery_service), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_delivery_service_path(@conn, :edit, delivery_service), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_delivery_service_path(@conn, :delete, delivery_service), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
       </td>
     </tr>
 <% end %>
