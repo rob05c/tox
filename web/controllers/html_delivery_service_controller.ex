@@ -1,10 +1,23 @@
 defmodule Tox.HtmlDeliveryServiceController do
+  require Logger
   use Tox.Web, :controller
 
   alias Tox.HtmlDeliveryService
 
   def index(conn, _params) do
-    deliveryservices = Repo.all(Tox.DeliveryService)
+    user = Guardian.Plug.current_resource(conn)
+    tenant_query = from d in Tox.DeliveryService,
+      where: d.tenant == ^user.tenant
+    deliveryservices =
+      case user.role do
+        r when r == "super_admin" or r == "ops_admin" or r == "ops_readonly" ->
+          Repo.all(Tox.DeliveryService)
+        r when r == "tenant_admin" or r == "tenant_readonly" ->
+          Repo.all(tenant_query)
+        _ ->
+          Logger.warn "User " <> user.email <> " invalid role " <> user.role
+          [] # You Get NOTHING. GOOD DAY SIR.
+      end
     render(conn, "index.html", deliveryservices: deliveryservices)
   end
 
