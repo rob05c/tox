@@ -49,6 +49,7 @@ defmodule Tox.DeliveryServiceView do
       tr_response_headers: delivery_service.tr_response_headers,
       initial_dispersion: delivery_service.initial_dispersion,
       dns_bypass_name: delivery_service.dns_bypass_name,
-      tr_request_headers: delivery_service.tr_request_headers}
+      tr_request_headers: delivery_service.tr_request_headers,
+      tenant: delivery_service.tenant}
   end
 end

@@ -3,8 +3,13 @@
 <ul>
 
   <li>
-    <strong>Xml:</strong>
+    <strong>XML ID:</strong>
     <%= @delivery_service.xml_id %>
+  </li>
+
+  <li>
+    <strong>Tenant:</strong>
+    <%= @delivery_service.tenant %>
   </li>
 
   <li>

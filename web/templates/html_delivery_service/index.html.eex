@@ -3,7 +3,8 @@
 <table class="table">
   <thead>
     <tr>
-      <th>Xml</th>
+      <th>XML ID</th>
+			<th>Tenant</th>
       <th>Active</th>
       <th>Dscp</th>
       <th>Signed</th>
@@ -50,6 +51,7 @@
 <%= for delivery_service <- @deliveryservices do %>
     <tr>
       <td><%= delivery_service.xml_id %></td>
+      <td><%= delivery_service.tenant %></td>
       <td><%= delivery_service.active %></td>
       <td><%= delivery_service.dscp %></td>
       <td><%= delivery_service.signed %></td>
