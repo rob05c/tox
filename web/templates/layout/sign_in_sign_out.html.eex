@@ -3,7 +3,7 @@
 <strong><%= link "Sign out", to: session_path(@conn, :delete, :access),
 		method: :delete, class: "btn" %></strong>
 </li>
-<strong><%= current_user(@conn).email %></strong>
+<strong><a href="<%= user_path(@conn, :show, current_user(@conn)) %>"> <%= current_user(@conn).email %></a></strong>
 <% else %>
 <li>
   <strong><a href="<%= user_path(@conn, :new) %>">Create Account</a></strong>
