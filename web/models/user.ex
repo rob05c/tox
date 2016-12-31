@@ -6,6 +6,7 @@ defmodule Tox.User do
     field :password, :string, virtual: true
     field :password_hash, :string
     field :role, :string
+    field :tenant, :string
 
     timestamps()
   end
@@ -22,7 +23,7 @@ defmodule Tox.User do
   def registration_changeset(model, params) do
     model
     |> changeset(params)
-    |> cast(put_role(params), ~w(password role), [])
+    |> cast(put_role(params), ~w(password role tenant), [])
     |> validate_length(:password, min: 6)
     |> put_password_hash()
   end
