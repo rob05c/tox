@@ -10,6 +10,9 @@
 	<%= error_tag f, :email %>
 </div>
 <div class="form-group">
+	<%= multiple_select f, :role, ["super_admin": 1, "ops_admin": 2, "ops_readonly": 3, "tenant_admin": 4, "tenant_readonly": 5], selected: [3], class: "form-control" %>
+</div>
+<div class="form-group">
 	<%= password_input f, :password, placeholder: "Password",
 		class: "form-control" %>
 </div>

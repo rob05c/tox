@@ -33,4 +33,11 @@ config :guardian, Guardian,
   ttl: { 30, :days },
   verify_issuer: true, # optional
   serializer: Tox.GuardianSerializer,
+  permissions: %{
+    super_admin: [:read_all, :write_all],
+    ops_admin: [:read_all, :write_all],
+    ops_readonly: [:read_all],
+    tenant_admin: [:read_own, :write_own],
+    tenant_readonly: [:read_own]
+  },
   secret_key: "A99CAEEA-0AC0-4DCC-9859-247D03C5D6CB"
