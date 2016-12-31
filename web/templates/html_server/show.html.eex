@@ -4,155 +4,155 @@
 
   <li>
     <strong>Host name:</strong>
-    <%= @html_server.host_name %>
+    <%= @server.host_name %>
   </li>
 
   <li>
     <strong>Domain name:</strong>
-    <%= @html_server.domain_name %>
+    <%= @server.domain_name %>
   </li>
 
   <li>
     <strong>Tcp port:</strong>
-    <%= @html_server.tcp_port %>
+    <%= @server.tcp_port %>
   </li>
 
   <li>
     <strong>Xmpp:</strong>
-    <%= @html_server.xmpp_id %>
+    <%= @server.xmpp_id %>
   </li>
 
   <li>
     <strong>Xmpp password:</strong>
-    <%= @html_server.xmpp_password %>
+    <%= @server.xmpp_password %>
   </li>
 
   <li>
     <strong>Interface name:</strong>
-    <%= @html_server.interface_name %>
+    <%= @server.interface_name %>
   </li>
 
   <li>
     <strong>Ip address:</strong>
-    <%= @html_server.ip_address %>
+    <%= @server.ip_address %>
   </li>
 
   <li>
     <strong>Ip netmask:</strong>
-    <%= @html_server.ip_netmask %>
+    <%= @server.ip_netmask %>
   </li>
 
   <li>
     <strong>Ip gateway:</strong>
-    <%= @html_server.ip_gateway %>
+    <%= @server.ip_gateway %>
   </li>
 
   <li>
     <strong>Ip6 address:</strong>
-    <%= @html_server.ip6_address %>
+    <%= @server.ip6_address %>
   </li>
 
   <li>
     <strong>Ip6 gateway:</strong>
-    <%= @html_server.ip6_gateway %>
+    <%= @server.ip6_gateway %>
   </li>
 
   <li>
     <strong>Interface mtu:</strong>
-    <%= @html_server.interface_mtu %>
+    <%= @server.interface_mtu %>
   </li>
 
   <li>
     <strong>Physical location:</strong>
-    <%= @html_server.physical_location %>
+    <%= @server.physical_location %>
   </li>
 
   <li>
     <strong>Rack:</strong>
-    <%= @html_server.rack %>
+    <%= @server.rack %>
   </li>
 
   <li>
     <strong>Cachegroup:</strong>
-    <%= @html_server.cachegroup %>
+    <%= @server.cachegroup %>
   </li>
 
   <li>
     <strong>Type:</strong>
-    <%= @html_server.type %>
+    <%= @server.type %>
   </li>
 
   <li>
     <strong>Update pending:</strong>
-    <%= @html_server.update_pending %>
+    <%= @server.update_pending %>
   </li>
 
   <li>
     <strong>Profile:</strong>
-    <%= @html_server.profile %>
+    <%= @server.profile %>
   </li>
 
   <li>
     <strong>Cdn:</strong>
-    <%= @html_server.cdn %>
+    <%= @server.cdn %>
   </li>
 
   <li>
     <strong>Management ip address:</strong>
-    <%= @html_server.management_ip_address %>
+    <%= @server.management_ip_address %>
   </li>
 
   <li>
     <strong>Management ip netmask:</strong>
-    <%= @html_server.management_ip_netmask %>
+    <%= @server.management_ip_netmask %>
   </li>
 
   <li>
     <strong>Management ip gateway:</strong>
-    <%= @html_server.management_ip_gateway %>
+    <%= @server.management_ip_gateway %>
   </li>
 
   <li>
     <strong>Ilo ip address:</strong>
-    <%= @html_server.ilo_ip_address %>
+    <%= @server.ilo_ip_address %>
   </li>
 
   <li>
     <strong>Ilo ip netmask:</strong>
-    <%= @html_server.ilo_ip_netmask %>
+    <%= @server.ilo_ip_netmask %>
   </li>
 
   <li>
     <strong>Ilo ip gateway:</strong>
-    <%= @html_server.ilo_ip_gateway %>
+    <%= @server.ilo_ip_gateway %>
   </li>
 
   <li>
     <strong>Ilo username:</strong>
-    <%= @html_server.ilo_username %>
+    <%= @server.ilo_username %>
   </li>
 
   <li>
     <strong>Ilo password:</strong>
-    <%= @html_server.ilo_password %>
+    <%= @server.ilo_password %>
   </li>
 
   <li>
     <strong>Router host name:</strong>
-    <%= @html_server.router_host_name %>
+    <%= @server.router_host_name %>
   </li>
 
   <li>
     <strong>Router port name:</strong>
-    <%= @html_server.router_port_name %>
+    <%= @server.router_port_name %>
   </li>
 
   <li>
     <strong>Last updated:</strong>
-    <%= @html_server.last_updated %>
+    <%= @server.last_updated %>
   </li>
 
 </ul>
 
-<%= link "Edit", to: html_server_path(@conn, :edit, @html_server) %>
+<%= link "Edit", to: html_server_path(@conn, :edit, @server) %>
 <%= link "Back", to: html_server_path(@conn, :index) %>
