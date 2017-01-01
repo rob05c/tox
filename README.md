@@ -112,6 +112,9 @@ Follow the above instructions for the rest of the Traffic Ops tables:
 `mix phoenix.gen.json Cdn cdns name:string dnssec_enabled:boolean`
 `mix phoenix.gen.html --no-model HtmlCdn cdns name:string dnssec_enabled:boolean`
 
+`mix phoenix.gen.json DeliveryserviceRegex deliveryserviceregexes deliveryservice:integer regex:integer set_number:integer`
+`mix phoenix.gen.html --no-model HtmlDeliveryserviceRegex deliveryserviceregexes deliveryservice:integer regex:integer set_number:integer`
+
 #### Testing
 
 `curl -Lv -d '{"delivery_service":{"xml_id":"zwei", "active":true, "html_bypass_fqdn":"zwei.example.net"}}' -H "Content-Type: application/json" -X POST http://localhost:4000/api/deliveryservices`

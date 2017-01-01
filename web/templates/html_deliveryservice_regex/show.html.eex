@@ -1,0 +1,24 @@
+<h2>Delivery service regex</h2>
+
+<ul>
+
+  <li>
+    <strong>Deliveryservice:</strong>
+    <%= @deliveryservice_regex.deliveryservice %>
+  </li>
+
+  <li>
+    <strong>Regex:</strong>
+    <%= @deliveryservice_regex.regex %>
+  </li>
+
+  <li>
+    <strong>Set number:</strong>
+    <%= @deliveryservice_regex.set_number %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_deliveryservice_regex_path(@conn, :edit, @deliveryservice_regex) %>
+
+<%= link "Back", to: html_deliveryservice_regex_path(@conn, :index) %>

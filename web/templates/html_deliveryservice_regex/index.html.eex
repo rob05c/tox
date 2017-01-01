@@ -1,0 +1,30 @@
+<h2>Delivery service regexes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Deliveryservice</th>
+      <th>Regex</th>
+      <th>Set number</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for deliveryservice_regex <- @deliveryserviceregexes do %>
+    <tr>
+      <td><%= deliveryservice_regex.deliveryservice %></td>
+      <td><%= deliveryservice_regex.regex %></td>
+      <td><%= deliveryservice_regex.set_number %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_deliveryservice_regex_path(@conn, :show, deliveryservice_regex), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_deliveryservice_regex_path(@conn, :edit, deliveryservice_regex), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_deliveryservice_regex_path(@conn, :delete, deliveryservice_regex), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New delivery service regex", to: html_deliveryservice_regex_path(@conn, :new) %>

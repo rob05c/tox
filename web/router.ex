@@ -38,6 +38,7 @@ defmodule Tox.Router do
     resources "/cachegroups", HtmlCachegroupController
     resources "/cachegroupparameters", HtmlCachegroupParameterController
     resources "/cdns", HtmlCdnController
+    resources "/deliveryserviceregexes", HtmlDeliveryserviceRegexController
   end
 
   # Other scopes may use custom stacks.
@@ -50,5 +51,6 @@ defmodule Tox.Router do
     resources "/cachegroups", CachegroupController, except: [:new, :edit]
     resources "/cachegroupparameters", CachegroupParameterController, except: [:new, :edit]
     resources "/cdns", CdnController, except: [:new, :edit]
+    resources "/deliveryserviceregexes", DeliveryserviceRegexController, except: [:new, :edit]
   end
 end
