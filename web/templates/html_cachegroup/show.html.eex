@@ -1,0 +1,44 @@
+<h2>Show cachegroup</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @cachegroup.name %>
+  </li>
+
+  <li>
+    <strong>Short name:</strong>
+    <%= @cachegroup.short_name %>
+  </li>
+
+  <li>
+    <strong>Latitude:</strong>
+    <%= @cachegroup.latitude %>
+  </li>
+
+  <li>
+    <strong>Longitude:</strong>
+    <%= @cachegroup.longitude %>
+  </li>
+
+  <li>
+    <strong>Parent cachegroup:</strong>
+    <%= @cachegroup.parent_cachegroup_id %>
+  </li>
+
+  <li>
+    <strong>Secondary parent cachegroup:</strong>
+    <%= @cachegroup.secondary_parent_cachegroup_id %>
+  </li>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @cachegroup.type %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_cachegroup_path(@conn, :edit, @cachegroup) %>
+
+<%= link "Back", to: html_cachegroup_path(@conn, :index) %>

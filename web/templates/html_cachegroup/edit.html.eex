@@ -1,0 +1,6 @@
+<h2>Edit cachegroup</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_cachegroup_path(@conn, :update, @cachegroup) %>
+
+<%= link "Back", to: html_cachegroup_path(@conn, :index) %>

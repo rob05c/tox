@@ -1,0 +1,38 @@
+<h2>Cachegroups</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short name</th>
+      <th>Latitude</th>
+      <th>Longitude</th>
+      <th>Parent cachegroup</th>
+      <th>Secondary parent cachegroup</th>
+      <th>Type</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cachegroup <- @cachegroups do %>
+    <tr>
+      <td><%= cachegroup.name %></td>
+      <td><%= cachegroup.short_name %></td>
+      <td><%= cachegroup.latitude %></td>
+      <td><%= cachegroup.longitude %></td>
+      <td><%= cachegroup.parent_cachegroup_id %></td>
+      <td><%= cachegroup.secondary_parent_cachegroup_id %></td>
+      <td><%= cachegroup.type %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_cachegroup_path(@conn, :show, cachegroup), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_cachegroup_path(@conn, :edit, cachegroup), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_cachegroup_path(@conn, :delete, cachegroup), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New cachegroup", to: html_cachegroup_path(@conn, :new) %>

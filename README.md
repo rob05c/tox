@@ -102,7 +102,9 @@ Follow the above instructions for the rest of the Traffic Ops tables:
 `mix phoenix.gen.json Asn asns asn:int cachegroup:int`
 `mix phoenix.gen.html --no-model HtmlAsn asns asn:integer cachegroup:integer`
 
+`mix phoenix.gen.json Cachegroup cachegroups name:string short_name:string latitude:float longitude:float parent_cachegroup_id:integer secondary_parent_cachegroup_id:integer type:integer`
 
+`mix phoenix.gen.html HtmlCachegroup cachegroups name:string short_name:string latitude:float longitude:float parent_cachegroup_id:integer secondary_parent_cachegroup_id:integer type:integer`
 
 #### Testing
 
