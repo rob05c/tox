@@ -1,0 +1,28 @@
+<h2>Delivery service servers</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Deliveryservice</th>
+      <th>Server</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for deliveryservice_server <- @deliveryserviceservers do %>
+    <tr>
+      <td><%= deliveryservice_server.deliveryservice %></td>
+      <td><%= deliveryservice_server.server %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_deliveryservice_server_path(@conn, :show, deliveryservice_server), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_deliveryservice_server_path(@conn, :edit, deliveryservice_server), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_deliveryservice_server_path(@conn, :delete, deliveryservice_server), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New delivery service server", to: html_deliveryservice_server_path(@conn, :new) %>

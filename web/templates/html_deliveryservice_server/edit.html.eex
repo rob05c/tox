@@ -1,0 +1,6 @@
+<h2>Edit delivery service server</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_deliveryservice_server_path(@conn, :update, @deliveryservice_server) %>
+
+<%= link "Back", to: html_deliveryservice_server_path(@conn, :index) %>

@@ -1,0 +1,19 @@
+<h2>Delivery service server</h2>
+
+<ul>
+
+  <li>
+    <strong>Deliveryservice:</strong>
+    <%= @deliveryservice_server.deliveryservice %>
+  </li>
+
+  <li>
+    <strong>Server:</strong>
+    <%= @deliveryservice_server.server %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_deliveryservice_server_path(@conn, :edit, @deliveryservice_server) %>
+
+<%= link "Back", to: html_deliveryservice_server_path(@conn, :index) %>
