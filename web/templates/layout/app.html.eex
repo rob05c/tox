@@ -68,7 +68,7 @@
             <li><a href="/asns">Networks (ASNs)</a></li>
             <li><a href="#">Hardware</a></li>
             <li><a href="#">Data Types</a></li>
-            <li><a href="#">Divisions</a></li>
+            <li><a href="/divisions">Divisions</a></li>
             <li><a href="#">Regions</a></li>
             <li><a href="#">Physical Locations</a></li>
             <li><a href="/cdns">CDNs</a></li>

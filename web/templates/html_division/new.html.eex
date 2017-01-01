@@ -1,0 +1,6 @@
+<h2>New division</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_division_path(@conn, :create) %>
+
+<%= link "Back", to: html_division_path(@conn, :index) %>

@@ -1,0 +1,26 @@
+<h2>Divisions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for division <- @divisions do %>
+    <tr>
+      <td><%= division.name %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_division_path(@conn, :show, division), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_division_path(@conn, :edit, division), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_division_path(@conn, :delete, division), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New division", to: html_division_path(@conn, :new) %>

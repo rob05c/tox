@@ -118,6 +118,9 @@ Follow the above instructions for the rest of the Traffic Ops tables:
 `mix phoenix.gen.json DeliveryserviceServer deliveryserviceservers deliveryservice:integer server:integer`
 `mix phoenix.gen.html --no-model HtmlDeliveryserviceServer deliveryserviceservers deliveryservice:integer server:integer`
 
+`mix phoenix.gen.json Division divisions name:string`
+`mix phoenix.gen.html --no-model HtmlDivision divisions name:string`
+
 #### Testing
 
 `curl -Lv -d '{"delivery_service":{"xml_id":"zwei", "active":true, "html_bypass_fqdn":"zwei.example.net"}}' -H "Content-Type: application/json" -X POST http://localhost:4000/api/deliveryservices`

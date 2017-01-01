@@ -1,0 +1,14 @@
+<h2>Division</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @division.name %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_division_path(@conn, :edit, @division) %>
+
+<%= link "Back", to: html_division_path(@conn, :index) %>
