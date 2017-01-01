@@ -1,0 +1,6 @@
+<h2>Edit CDN</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_cdn_path(@conn, :update, @cdn) %>
+
+<%= link "Back", to: html_cdn_path(@conn, :index) %>

@@ -1,0 +1,28 @@
+<h2>CDNs</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Dnssec enabled</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cdn <- @cdns do %>
+    <tr>
+      <td><%= cdn.name %></td>
+      <td><%= cdn.dnssec_enabled %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_cdn_path(@conn, :show, cdn), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_cdn_path(@conn, :edit, cdn), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_cdn_path(@conn, :delete, cdn), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New CDN", to: html_cdn_path(@conn, :new) %>

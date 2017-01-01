@@ -1,0 +1,19 @@
+<h2>CDN</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @cdn.name %>
+  </li>
+
+  <li>
+    <strong>Dnssec enabled:</strong>
+    <%= @cdn.dnssec_enabled %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_cdn_path(@conn, :edit, @cdn) %>
+
+<%= link "Back", to: html_cdn_path(@conn, :index) %>

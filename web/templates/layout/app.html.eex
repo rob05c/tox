@@ -71,6 +71,7 @@
             <li><a href="#">Divisions</a></li>
             <li><a href="#">Regions</a></li>
             <li><a href="#">Physical Locations</a></li>
+            <li><a href="/cdns">CDNs</a></li>
           </ul>
         </li>
         <li>
@@ -81,7 +82,6 @@
           <ul>
             <li><a href="#">About</a></li>
             <li><a href="#">Release Notes</a></li>
-            <li><a href="#">Logout</a></li>
           </ul>
         </li>
         <hr />
