@@ -1,0 +1,19 @@
+<h2>Show cachegroup parameter</h2>
+
+<ul>
+
+  <li>
+    <strong>Cachegroup:</strong>
+    <%= @cachegroup_parameter.cachegroup %>
+  </li>
+
+  <li>
+    <strong>Parameter:</strong>
+    <%= @cachegroup_parameter.parameter %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_cachegroup_parameter_path(@conn, :edit, @cachegroup_parameter) %>
+
+<%= link "Back", to: html_cachegroup_parameter_path(@conn, :index) %>

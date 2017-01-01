@@ -106,6 +106,9 @@ Follow the above instructions for the rest of the Traffic Ops tables:
 
 `mix phoenix.gen.html HtmlCachegroup cachegroups name:string short_name:string latitude:float longitude:float parent_cachegroup_id:integer secondary_parent_cachegroup_id:integer type:integer`
 
+`mix phoenix.gen.json CachegroupParameter cachegroupparameters cachegroup:integer parameter:integer`
+`mix phoenix.gen.html --no-model HtmlCachegroupParameter cachegroupparameters cachegroup:integer parameter:integer`
+
 #### Testing
 
 `curl -Lv -d '{"delivery_service":{"xml_id":"zwei", "active":true, "html_bypass_fqdn":"zwei.example.net"}}' -H "Content-Type: application/json" -X POST http://localhost:4000/api/deliveryservices`

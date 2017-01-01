@@ -62,8 +62,8 @@
         <li>
           <strong>Misc</strong>
           <ul>
-            <li><a href="#">Cache Groups</a></li>
-            <li><a href="#">Users</a></li>
+            <li><a href="/cachegroups">Cache Groups</a></li>
+            <li><a href="/users">Users</a></li>
             <li><a href="#">Profiles</a></li>
             <li><a href="/asns">Networks (ASNs)</a></li>
             <li><a href="#">Hardware</a></li>

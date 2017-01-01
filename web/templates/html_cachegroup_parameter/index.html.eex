@@ -1,0 +1,28 @@
+<h2>Listing cachegroupparameters</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Cachegroup</th>
+      <th>Parameter</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cachegroup_parameter <- @cachegroupparameters do %>
+    <tr>
+      <td><%= cachegroup_parameter.cachegroup %></td>
+      <td><%= cachegroup_parameter.parameter %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_cachegroup_parameter_path(@conn, :show, cachegroup_parameter), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_cachegroup_parameter_path(@conn, :edit, cachegroup_parameter), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_cachegroup_parameter_path(@conn, :delete, cachegroup_parameter), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New cachegroup parameter", to: html_cachegroup_parameter_path(@conn, :new) %>
