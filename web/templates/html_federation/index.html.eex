@@ -1,0 +1,30 @@
+<h2>Federations</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Cname</th>
+      <th>Description</th>
+      <th>Ttl</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for federation <- @federations do %>
+    <tr>
+      <td><%= federation.cname %></td>
+      <td><%= federation.description %></td>
+      <td><%= federation.ttl %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_federation_path(@conn, :show, federation), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_federation_path(@conn, :edit, federation), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_federation_path(@conn, :delete, federation), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New federation", to: html_federation_path(@conn, :new) %>

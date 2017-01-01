@@ -35,7 +35,7 @@
           <strong>Delivery Services</strong>
           <ul>
             <li><a href="/deliveryservices">All</a></li>
-            <li><a href="#">Federations</a></li>
+            <li><a href="/federations">Federations</a></li>
           </ul>
         </li>
         <li>

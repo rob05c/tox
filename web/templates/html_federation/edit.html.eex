@@ -1,0 +1,6 @@
+<h2>Edit federation</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_federation_path(@conn, :update, @federation) %>
+
+<%= link "Back", to: html_federation_path(@conn, :index) %>

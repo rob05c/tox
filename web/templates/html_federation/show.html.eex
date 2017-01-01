@@ -1,0 +1,24 @@
+<h2>Federation</h2>
+
+<ul>
+
+  <li>
+    <strong>Cname:</strong>
+    <%= @federation.cname %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @federation.description %>
+  </li>
+
+  <li>
+    <strong>Ttl:</strong>
+    <%= @federation.ttl %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_federation_path(@conn, :edit, @federation) %>
+
+<%= link "Back", to: html_federation_path(@conn, :index) %>
