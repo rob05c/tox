@@ -1,0 +1,19 @@
+<h2>ASN</h2>
+
+<ul>
+
+  <li>
+    <strong>Asn:</strong>
+    <%= @asn.asn %>
+  </li>
+
+  <li>
+    <strong>Cachegroup:</strong>
+    <%= @asn.cachegroup %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_asn_path(@conn, :edit, @asn) %>
+
+<%= link "Back", to: html_asn_path(@conn, :index) %>

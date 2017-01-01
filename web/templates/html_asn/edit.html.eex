@@ -1,0 +1,6 @@
+<h2>Edit ASN</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_asn_path(@conn, :update, @asn) %>
+
+<%= link "Back", to: html_asn_path(@conn, :index) %>

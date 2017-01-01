@@ -95,6 +95,15 @@ Following are the commands which were run to generate JSON and HTML, and the nec
 
 * in `model/delivery_service.ex` in `|> validate_required([...` remove optional columns
 
+### Other tables
+
+Follow the above instructions for the rest of the Traffic Ops tables:
+
+`mix phoenix.gen.json Asn asns asn:int cachegroup:int`
+`mix phoenix.gen.html --no-model HtmlAsn asns asn:integer cachegroup:integer`
+
+
+
 #### Testing
 
 `curl -Lv -d '{"delivery_service":{"xml_id":"zwei", "active":true, "html_bypass_fqdn":"zwei.example.net"}}' -H "Content-Type: application/json" -X POST http://localhost:4000/api/deliveryservices`

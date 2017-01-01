@@ -65,7 +65,7 @@
             <li><a href="#">Cache Groups</a></li>
             <li><a href="#">Users</a></li>
             <li><a href="#">Profiles</a></li>
-            <li><a href="#">Networks (ASNs)</a></li>
+            <li><a href="/asns">Networks (ASNs)</a></li>
             <li><a href="#">Hardware</a></li>
             <li><a href="#">Data Types</a></li>
             <li><a href="#">Divisions</a></li>

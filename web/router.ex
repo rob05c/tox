@@ -34,13 +34,15 @@ defmodule Tox.Router do
     resources "/users", UserController, only: [:show, :index, :update]
     resources "/servers", HtmlServerController
     resources "/deliveryservices", HtmlDeliveryServiceController
+    resources "/asns", HtmlAsnController
   end
 
   # Other scopes may use custom stacks.
   scope "/api", Tox do
-    pipe_through :api
+    pipe_through :api # TODO auth, and readme instructions
 
     resources "/servers", ServerController, except: [:new, :edit]
     resources "/deliveryservices", DeliveryServiceController, except: [:new, :edit]
+    resources "/asns", AsnController, except: [:new, :edit]
   end
 end

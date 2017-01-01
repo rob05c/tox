@@ -1,0 +1,28 @@
+<h2>Listing asns</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Asn</th>
+      <th>Cachegroup</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for asn <- @asns do %>
+    <tr>
+      <td><%= asn.asn %></td>
+      <td><%= asn.cachegroup %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_asn_path(@conn, :show, asn), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_asn_path(@conn, :edit, asn), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_asn_path(@conn, :delete, asn), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New ASN", to: html_asn_path(@conn, :new) %>
