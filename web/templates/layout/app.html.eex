@@ -41,10 +41,10 @@
         <li>
           <strong>Parameters</strong>
           <ul>
-            <li><a href="/parameters">Global Profile</a></li>
-            <li><a href="/parameters">All Cache Groups</a></li>
+            <li><a href="/profiles">Global Profile</a></li>
+            <li><a href="/cachegroups">All Cache Groups</a></li>
             <li><a href="/parameters">All Profiles</a></li>
-            <li><a href="/parameters">Select Profile</a></li>
+            <li><a href="/profiles">Select Profile</a></li>
             <li><a href="/parameters">Orphaned Parameters</a></li>
           </ul>
         </li>
@@ -64,7 +64,7 @@
           <ul>
             <li><a href="/cachegroups">Cache Groups</a></li>
             <li><a href="/users">Users</a></li>
-            <li><a href="#">Profiles</a></li>
+            <li><a href="/profiles">Profiles</a></li>
             <li><a href="/asns">Networks (ASNs)</a></li>
             <li><a href="/hardware">Hardware</a></li>
             <li><a href="#">Data Types</a></li>
@@ -72,10 +72,11 @@
             <li><a href="#">Regions</a></li>
             <li><a href="#">Physical Locations</a></li>
             <li><a href="/cdns">CDNs</a></li>
+            <li><a href="/jobs">Jobs</a></li>
           </ul>
         </li>
         <li>
-          <strong><a href="#">Changelog</a></strong>
+          <strong><a href="/logs">Changelog</a></strong>
         </li>
         <li>
           <strong>Help</strong>
