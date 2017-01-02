@@ -1,0 +1,6 @@
+<h2>New profile parameter</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_profile_parameter_path(@conn, :create) %>
+
+<%= link "Back", to: html_profile_parameter_path(@conn, :index) %>

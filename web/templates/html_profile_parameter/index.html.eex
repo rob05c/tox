@@ -1,0 +1,28 @@
+<h2>Profile parameters</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Profile</th>
+      <th>Parameter</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for profile_parameter <- @profileparameters do %>
+    <tr>
+      <td><%= profile_parameter.profile %></td>
+      <td><%= profile_parameter.parameter %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_profile_parameter_path(@conn, :show, profile_parameter), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_profile_parameter_path(@conn, :edit, profile_parameter), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_profile_parameter_path(@conn, :delete, profile_parameter), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New profile parameter", to: html_profile_parameter_path(@conn, :new) %>
