@@ -1,0 +1,24 @@
+<h2>Hardware</h2>
+
+<ul>
+
+  <li>
+    <strong>Server:</strong>
+    <%= @hardware.server %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @hardware.description %>
+  </li>
+
+  <li>
+    <strong>Value:</strong>
+    <%= @hardware.value %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_hardware_path(@conn, :edit, @hardware) %>
+
+<%= link "Back", to: html_hardware_path(@conn, :index) %>

@@ -66,7 +66,7 @@
             <li><a href="/users">Users</a></li>
             <li><a href="#">Profiles</a></li>
             <li><a href="/asns">Networks (ASNs)</a></li>
-            <li><a href="#">Hardware</a></li>
+            <li><a href="/hardware">Hardware</a></li>
             <li><a href="#">Data Types</a></li>
             <li><a href="/divisions">Divisions</a></li>
             <li><a href="#">Regions</a></li>

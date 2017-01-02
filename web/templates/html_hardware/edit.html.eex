@@ -1,0 +1,6 @@
+<h2>Edit hardware</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_hardware_path(@conn, :update, @hardware) %>
+
+<%= link "Back", to: html_hardware_path(@conn, :index) %>

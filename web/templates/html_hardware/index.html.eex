@@ -1,0 +1,30 @@
+<h2>All Hardware</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Server</th>
+      <th>Description</th>
+      <th>Value</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for hardware <- @hardwares do %>
+    <tr>
+      <td><%= hardware.server %></td>
+      <td><%= hardware.description %></td>
+      <td><%= hardware.value %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_hardware_path(@conn, :show, hardware), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_hardware_path(@conn, :edit, hardware), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_hardware_path(@conn, :delete, hardware), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New hardware", to: html_hardware_path(@conn, :new) %>

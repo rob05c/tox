@@ -42,6 +42,7 @@ defmodule Tox.Router do
     resources "/deliveryserviceservers", HtmlDeliveryserviceServerController
     resources "/divisions", HtmlDivisionController
     resources "/federations", HtmlFederationController
+    resources "/hardware", HtmlHardwareController
   end
 
   # Other scopes may use custom stacks.
@@ -58,5 +59,6 @@ defmodule Tox.Router do
     resources "/deliveryserviceservers", DeliveryserviceServerController, except: [:new, :edit]
     resources "/divisions", DivisionController, except: [:new, :edit]
     resources "/federations", FederationController, except: [:new, :edit]
+    resources "/hardware", HardwareController, except: [:new, :edit]
   end
 end
