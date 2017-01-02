@@ -1,0 +1,83 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= label f, :agent, class: "control-label" %>
+    <%= number_input f, :agent, class: "form-control" %>
+    <%= error_tag f, :agent %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :object_type, class: "control-label" %>
+    <%= text_input f, :object_type, class: "form-control" %>
+    <%= error_tag f, :object_type %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :object_name, class: "control-label" %>
+    <%= text_input f, :object_name, class: "form-control" %>
+    <%= error_tag f, :object_name %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :keyword, class: "control-label" %>
+    <%= text_input f, :keyword, class: "form-control" %>
+    <%= error_tag f, :keyword %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :parameters, class: "control-label" %>
+    <%= text_input f, :parameters, class: "form-control" %>
+    <%= error_tag f, :parameters %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :asset_url, class: "control-label" %>
+    <%= text_input f, :asset_url, class: "form-control" %>
+    <%= error_tag f, :asset_url %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :asset_type, class: "control-label" %>
+    <%= text_input f, :asset_type, class: "form-control" %>
+    <%= error_tag f, :asset_type %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :status, class: "control-label" %>
+    <%= number_input f, :status, class: "form-control" %>
+    <%= error_tag f, :status %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :start_time, class: "control-label" %>
+    <%= datetime_select f, :start_time, class: "form-control" %>
+    <%= error_tag f, :start_time %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :entered_time, class: "control-label" %>
+    <%= datetime_select f, :entered_time, class: "form-control" %>
+    <%= error_tag f, :entered_time %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :job_user, class: "control-label" %>
+    <%= number_input f, :job_user, class: "form-control" %>
+    <%= error_tag f, :job_user %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :job_deliveryservice, class: "control-label" %>
+    <%= number_input f, :job_deliveryservice, class: "form-control" %>
+    <%= error_tag f, :job_deliveryservice %>
+  </div>
+
+  <div class="form-group">
+    <%= submit "Submit", class: "btn btn-primary" %>
+  </div>
+<% end %>

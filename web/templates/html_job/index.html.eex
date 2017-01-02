@@ -1,0 +1,48 @@
+<h2>Jobs</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Agent</th>
+      <th>Object type</th>
+      <th>Object name</th>
+      <th>Keyword</th>
+      <th>Parameters</th>
+      <th>Asset url</th>
+      <th>Asset type</th>
+      <th>Status</th>
+      <th>Start time</th>
+      <th>Entered time</th>
+      <th>Job user</th>
+      <th>Job deliveryservice</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for job <- @jobs do %>
+    <tr>
+      <td><%= job.agent %></td>
+      <td><%= job.object_type %></td>
+      <td><%= job.object_name %></td>
+      <td><%= job.keyword %></td>
+      <td><%= job.parameters %></td>
+      <td><%= job.asset_url %></td>
+      <td><%= job.asset_type %></td>
+      <td><%= job.status %></td>
+      <td><%= job.start_time %></td>
+      <td><%= job.entered_time %></td>
+      <td><%= job.job_user %></td>
+      <td><%= job.job_deliveryservice %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_job_path(@conn, :show, job), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_job_path(@conn, :edit, job), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_job_path(@conn, :delete, job), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New job", to: html_job_path(@conn, :new) %>

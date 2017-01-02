@@ -1,0 +1,69 @@
+<h2>Job</h2>
+
+<ul>
+
+  <li>
+    <strong>Agent:</strong>
+    <%= @job.agent %>
+  </li>
+
+  <li>
+    <strong>Object type:</strong>
+    <%= @job.object_type %>
+  </li>
+
+  <li>
+    <strong>Object name:</strong>
+    <%= @job.object_name %>
+  </li>
+
+  <li>
+    <strong>Keyword:</strong>
+    <%= @job.keyword %>
+  </li>
+
+  <li>
+    <strong>Parameters:</strong>
+    <%= @job.parameters %>
+  </li>
+
+  <li>
+    <strong>Asset url:</strong>
+    <%= @job.asset_url %>
+  </li>
+
+  <li>
+    <strong>Asset type:</strong>
+    <%= @job.asset_type %>
+  </li>
+
+  <li>
+    <strong>Status:</strong>
+    <%= @job.status %>
+  </li>
+
+  <li>
+    <strong>Start time:</strong>
+    <%= @job.start_time %>
+  </li>
+
+  <li>
+    <strong>Entered time:</strong>
+    <%= @job.entered_time %>
+  </li>
+
+  <li>
+    <strong>Job user:</strong>
+    <%= @job.job_user %>
+  </li>
+
+  <li>
+    <strong>Job deliveryservice:</strong>
+    <%= @job.job_deliveryservice %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_job_path(@conn, :edit, @job) %>
+
+<%= link "Back", to: html_job_path(@conn, :index) %>
