@@ -1,0 +1,6 @@
+<h2>Edit log</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_log_path(@conn, :update, @log) %>
+
+<%= link "Back", to: html_log_path(@conn, :index) %>

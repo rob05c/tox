@@ -1,0 +1,29 @@
+<h2>Log</h2>
+
+<ul>
+
+  <li>
+    <strong>Level:</strong>
+    <%= @log.level %>
+  </li>
+
+  <li>
+    <strong>Message:</strong>
+    <%= @log.message %>
+  </li>
+
+  <li>
+    <strong>User:</strong>
+    <%= @log.user %>
+  </li>
+
+  <li>
+    <strong>Ticketnum:</strong>
+    <%= @log.ticketnum %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_log_path(@conn, :edit, @log) %>
+
+<%= link "Back", to: html_log_path(@conn, :index) %>

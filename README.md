@@ -142,6 +142,9 @@ Follow the above instructions for the rest of the Traffic Ops tables:
 `mix phoenix.gen.json Job jobs agent:integer object_type:string object_name:string keyword:string parameters:string asset_url:string asset_type:string status:integer start_time:datetime entered_time:datetime job_user:integer job_deliveryservice:integer`
 `mix phoenix.gen.html --no-model HtmlJob jobs agent:integer object_type:string object_name:string keyword:string parameters:string asset_url:string asset_type:string status:integer start_time:datetime entered_time:datetime job_user:integer job_deliveryservice:integer`
 
+`mix phoenix.gen.json Log logs level:string message:string user:integer ticketnum:string`
+`mix phoenix.gen.html --no-model HtmlLog logs level:string message:string user:integer ticketnum:string`
+
 #### Testing
 
 `curl -Lv -d '{"delivery_service":{"xml_id":"zwei", "active":true, "html_bypass_fqdn":"zwei.example.net"}}' -H "Content-Type: application/json" -X POST http://localhost:4000/api/deliveryservices`
