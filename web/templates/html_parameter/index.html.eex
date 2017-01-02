@@ -1,0 +1,32 @@
+<h2>Parameters</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Config file</th>
+      <th>Value</th>
+      <th>Secure</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for parameter <- @parameters do %>
+    <tr>
+      <td><%= parameter.name %></td>
+      <td><%= parameter.config_file %></td>
+      <td><%= parameter.value %></td>
+      <td><%= parameter.secure %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_parameter_path(@conn, :show, parameter), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_parameter_path(@conn, :edit, parameter), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_parameter_path(@conn, :delete, parameter), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New parameter", to: html_parameter_path(@conn, :new) %>

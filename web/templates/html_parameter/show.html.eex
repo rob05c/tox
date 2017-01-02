@@ -1,0 +1,29 @@
+<h2>Parameter</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @parameter.name %>
+  </li>
+
+  <li>
+    <strong>Config file:</strong>
+    <%= @parameter.config_file %>
+  </li>
+
+  <li>
+    <strong>Value:</strong>
+    <%= @parameter.value %>
+  </li>
+
+  <li>
+    <strong>Secure:</strong>
+    <%= @parameter.secure %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_parameter_path(@conn, :edit, @parameter) %>
+
+<%= link "Back", to: html_parameter_path(@conn, :index) %>

@@ -41,11 +41,11 @@
         <li>
           <strong>Parameters</strong>
           <ul>
-            <li><a href="#">Global Profile</a></li>
-            <li><a href="#">All Cache Groups</a></li>
-            <li><a href="#">All Profile</a></li>
-            <li><a href="#">Select Profile</a></li>
-            <li><a href="#">Orphaned Parameters</a></li>
+            <li><a href="/parameters">Global Profile</a></li>
+            <li><a href="/parameters">All Cache Groups</a></li>
+            <li><a href="/parameters">All Profiles</a></li>
+            <li><a href="/parameters">Select Profile</a></li>
+            <li><a href="/parameters">Orphaned Parameters</a></li>
           </ul>
         </li>
         <li>
