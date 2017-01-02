@@ -45,6 +45,7 @@ defmodule Tox.Router do
     resources "/hardware", HtmlHardwareController
     resources "/parameters", HtmlParameterController
     resources "/profileparameters", HtmlProfileParameterController
+    resources "/profiles", HtmlProfileController
   end
 
   # Other scopes may use custom stacks.
@@ -64,5 +65,6 @@ defmodule Tox.Router do
     resources "/hardware", HardwareController, except: [:new, :edit]
     resources "/parameters", ParameterController, except: [:new, :edit]
     resources "/profileparameters", ProfileParameterController, except: [:new, :edit]
+    resources "/profiles", ProfileController, except: [:new, :edit]
   end
 end
