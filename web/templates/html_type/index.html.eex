@@ -1,0 +1,30 @@
+<h2>Types</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Use in table</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for type <- @types do %>
+    <tr>
+      <td><%= type.name %></td>
+      <td><%= type.description %></td>
+      <td><%= type.use_in_table %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_type_path(@conn, :show, type), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_type_path(@conn, :edit, type), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_type_path(@conn, :delete, type), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New type", to: html_type_path(@conn, :new) %>

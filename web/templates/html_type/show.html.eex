@@ -1,0 +1,24 @@
+<h2>Type</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @type.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @type.description %>
+  </li>
+
+  <li>
+    <strong>Use in table:</strong>
+    <%= @type.use_in_table %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_type_path(@conn, :edit, @type) %>
+
+<%= link "Back", to: html_type_path(@conn, :index) %>

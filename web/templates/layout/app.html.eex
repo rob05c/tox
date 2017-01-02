@@ -67,7 +67,7 @@
             <li><a href="/profiles">Profiles</a></li>
             <li><a href="/asns">Networks (ASNs)</a></li>
             <li><a href="/hardware">Hardware</a></li>
-            <li><a href="#">Data Types</a></li>
+            <li><a href="/types">Data Types</a></li>
             <li><a href="/divisions">Divisions</a></li>
             <li><a href="/regions">Regions</a></li>
             <li><a href="/physicallocations">Physical Locations</a></li>
