@@ -1,20 +1,20 @@
 defmodule Tox.HtmlAsnController do
   use Tox.Web, :controller
 
-  alias Tox.Tox.Asn
+  alias Tox.Asn
 
   def index(conn, _params) do
-    asns = Repo.all(Tox.Asn)
+    asns = Repo.all(Asn)
     render(conn, "index.html", asns: asns)
   end
 
   def new(conn, _params) do
-    changeset = Tox.Asn.changeset(%Tox.Asn{})
+    changeset = Asn.changeset(%Asn{})
     render(conn, "new.html", changeset: changeset)
   end
 
   def create(conn, %{"asn" => asn_params}) do
-    changeset = Tox.Asn.changeset(%Tox.Asn{}, asn_params)
+    changeset = Asn.changeset(%Asn{}, asn_params)
 
     case Repo.insert(changeset) do
       {:ok, _asn} ->
@@ -27,19 +27,19 @@ defmodule Tox.HtmlAsnController do
   end
 
   def show(conn, %{"id" => id}) do
-    asn = Repo.get!(Tox.Asn, id)
+    asn = Repo.get!(Asn, id)
     render(conn, "show.html", asn: asn)
   end
 
   def edit(conn, %{"id" => id}) do
-    asn = Repo.get!(Tox.Asn, id)
-    changeset = Tox.Asn.changeset(asn)
+    asn = Repo.get!(Asn, id)
+    changeset = Asn.changeset(asn)
     render(conn, "edit.html", asn: asn, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "asn" => asn_params}) do
-    asn = Repo.get!(Tox.Asn, id)
-    changeset = Tox.Asn.changeset(asn, asn_params)
+    asn = Repo.get!(Asn, id)
+    changeset = Asn.changeset(asn, asn_params)
 
     case Repo.update(changeset) do
       {:ok, asn} ->
@@ -52,7 +52,7 @@ defmodule Tox.HtmlAsnController do
   end
 
   def delete(conn, %{"id" => id}) do
-    asn = Repo.get!(Tox.Asn, id)
+    asn = Repo.get!(Asn, id)
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).

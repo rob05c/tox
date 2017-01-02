@@ -2,16 +2,16 @@ defmodule Tox.HtmlDeliveryServiceController do
   require Logger
   use Tox.Web, :controller
 
-  alias Tox.HtmlDeliveryService
+  alias Tox.DeliveryService
 
   def index(conn, _params) do
     user = Guardian.Plug.current_resource(conn)
-    tenant_query = from d in Tox.DeliveryService,
+    tenant_query = from d in DeliveryService,
       where: d.tenant == ^user.tenant
     deliveryservices =
       case user.role do
         r when r == "super_admin" or r == "ops_admin" or r == "ops_readonly" ->
-          Repo.all(Tox.DeliveryService)
+          Repo.all(DeliveryService)
         r when r == "tenant_admin" or r == "tenant_readonly" ->
           Repo.all(tenant_query)
         _ ->
@@ -22,12 +22,12 @@ defmodule Tox.HtmlDeliveryServiceController do
   end
 
   def new(conn, _params) do
-    changeset = Tox.DeliveryService.changeset(%Tox.DeliveryService{})
+    changeset = DeliveryService.changeset(%DeliveryService{})
     render(conn, "new.html", changeset: changeset)
   end
 
   def create(conn, %{"delivery_service" => delivery_service_params}) do
-    changeset = Tox.DeliveryService.changeset(%Tox.DeliveryService{}, delivery_service_params)
+    changeset = DeliveryService.changeset(%DeliveryService{}, delivery_service_params)
 
     case Repo.insert(changeset) do
       {:ok, _delivery_service} ->
@@ -40,19 +40,19 @@ defmodule Tox.HtmlDeliveryServiceController do
   end
 
   def show(conn, %{"id" => id}) do
-    delivery_service = Repo.get!(Tox.DeliveryService, id)
+    delivery_service = Repo.get!(DeliveryService, id)
     render(conn, "show.html", delivery_service: delivery_service)
   end
 
   def edit(conn, %{"id" => id}) do
-    delivery_service = Repo.get!(Tox.DeliveryService, id)
-    changeset = Tox.DeliveryService.changeset(delivery_service)
+    delivery_service = Repo.get!(DeliveryService, id)
+    changeset = DeliveryService.changeset(delivery_service)
     render(conn, "edit.html", delivery_service: delivery_service, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "delivery_service" => delivery_service_params}) do
-    delivery_service = Repo.get!(Tox.DeliveryService, id)
-    changeset = Tox.DeliveryService.changeset(delivery_service, delivery_service_params)
+    delivery_service = Repo.get!(DeliveryService, id)
+    changeset = DeliveryService.changeset(delivery_service, delivery_service_params)
 
     case Repo.update(changeset) do
       {:ok, delivery_service} ->
@@ -65,7 +65,7 @@ defmodule Tox.HtmlDeliveryServiceController do
   end
 
   def delete(conn, %{"id" => id}) do
-    delivery_service = Repo.get!(Tox.DeliveryService, id)
+    delivery_service = Repo.get!(DeliveryService, id)
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).

@@ -14,7 +14,7 @@ defmodule Tox.UserController do
   def create(conn, %{"user" => user_params}) do
     changeset = User.registration_changeset(%User{}, user_params)
     case Repo.insert(changeset) do
-      {:ok, user} ->
+      {:ok, _user} ->
         conn
         |> put_flash(:info, "User created!")
         |> redirect(to: user_path(conn, :index))
@@ -34,7 +34,7 @@ defmodule Tox.UserController do
     user = Repo.get(User, id)
     changeset = User.registration_changeset(user, user_params)
     case Repo.update(changeset) do
-      {:ok, user} ->
+      {:ok, _user} ->
         conn
         |> put_flash(:info, "User updated")
         |> redirect(to: user_path(conn, :index))
