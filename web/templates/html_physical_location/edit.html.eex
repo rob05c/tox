@@ -1,0 +1,6 @@
+<h2>Edit physical location</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_physical_location_path(@conn, :update, @physical_location) %>
+
+<%= link "Back", to: html_physical_location_path(@conn, :index) %>

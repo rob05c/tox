@@ -1,0 +1,46 @@
+<h2>Physical Locations</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short name</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Poc</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Comments</th>
+      <th>Region</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for physical_location <- @physicallocations do %>
+    <tr>
+      <td><%= physical_location.name %></td>
+      <td><%= physical_location.short_name %></td>
+      <td><%= physical_location.address %></td>
+      <td><%= physical_location.city %></td>
+      <td><%= physical_location.state %></td>
+      <td><%= physical_location.zip %></td>
+      <td><%= physical_location.poc %></td>
+      <td><%= physical_location.phone %></td>
+      <td><%= physical_location.email %></td>
+      <td><%= physical_location.comments %></td>
+      <td><%= physical_location.region %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_physical_location_path(@conn, :show, physical_location), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_physical_location_path(@conn, :edit, physical_location), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_physical_location_path(@conn, :delete, physical_location), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New physical location", to: html_physical_location_path(@conn, :new) %>

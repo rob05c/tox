@@ -1,0 +1,64 @@
+<h2>Physical location</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @physical_location.name %>
+  </li>
+
+  <li>
+    <strong>Short name:</strong>
+    <%= @physical_location.short_name %>
+  </li>
+
+  <li>
+    <strong>Address:</strong>
+    <%= @physical_location.address %>
+  </li>
+
+  <li>
+    <strong>City:</strong>
+    <%= @physical_location.city %>
+  </li>
+
+  <li>
+    <strong>State:</strong>
+    <%= @physical_location.state %>
+  </li>
+
+  <li>
+    <strong>Zip:</strong>
+    <%= @physical_location.zip %>
+  </li>
+
+  <li>
+    <strong>Poc:</strong>
+    <%= @physical_location.poc %>
+  </li>
+
+  <li>
+    <strong>Phone:</strong>
+    <%= @physical_location.phone %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @physical_location.email %>
+  </li>
+
+  <li>
+    <strong>Comments:</strong>
+    <%= @physical_location.comments %>
+  </li>
+
+  <li>
+    <strong>Region:</strong>
+    <%= @physical_location.region %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_physical_location_path(@conn, :edit, @physical_location) %>
+
+<%= link "Back", to: html_physical_location_path(@conn, :index) %>
