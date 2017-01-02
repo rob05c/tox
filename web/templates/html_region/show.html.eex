@@ -1,0 +1,19 @@
+<h2>Region</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @region.name %>
+  </li>
+
+  <li>
+    <strong>Division:</strong>
+    <%= @region.division %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_region_path(@conn, :edit, @region) %>
+
+<%= link "Back", to: html_region_path(@conn, :index) %>

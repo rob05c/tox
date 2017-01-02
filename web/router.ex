@@ -49,6 +49,7 @@ defmodule Tox.Router do
     resources "/jobs", HtmlJobController
     resources "/logs", HtmlLogController
     resources "/physicallocations", HtmlPhysicalLocationController
+    resources "/regions", HtmlRegionController
   end
 
   # Other scopes may use custom stacks.
@@ -72,5 +73,6 @@ defmodule Tox.Router do
     resources "/jobs", JobController, except: [:new, :edit]
     resources "/logs", LogController, except: [:new, :edit]
     resources "/physicallocations", PhysicalLocationController, except: [:new, :edit]
+    resources "/regions", RegionController, except: [:new, :edit]
   end
 end

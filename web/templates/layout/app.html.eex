@@ -69,7 +69,7 @@
             <li><a href="/hardware">Hardware</a></li>
             <li><a href="#">Data Types</a></li>
             <li><a href="/divisions">Divisions</a></li>
-            <li><a href="#">Regions</a></li>
+            <li><a href="/regions">Regions</a></li>
             <li><a href="/physicallocations">Physical Locations</a></li>
             <li><a href="/cdns">CDNs</a></li>
             <li><a href="/jobs">Jobs</a></li>

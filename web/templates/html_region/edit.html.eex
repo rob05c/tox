@@ -1,0 +1,6 @@
+<h2>Edit region</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_region_path(@conn, :update, @region) %>
+
+<%= link "Back", to: html_region_path(@conn, :index) %>

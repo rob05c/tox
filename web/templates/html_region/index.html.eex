@@ -1,0 +1,28 @@
+<h2>Regions</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Division</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for region <- @regions do %>
+    <tr>
+      <td><%= region.name %></td>
+      <td><%= region.division %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_region_path(@conn, :show, region), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_region_path(@conn, :edit, region), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_region_path(@conn, :delete, region), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New region", to: html_region_path(@conn, :new) %>
