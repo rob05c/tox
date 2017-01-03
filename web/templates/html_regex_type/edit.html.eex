@@ -1,0 +1,6 @@
+<h2>Edit regex type</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_regex_type_path(@conn, :update, @regex_type) %>
+
+<%= link "Back", to: html_regex_type_path(@conn, :index) %>

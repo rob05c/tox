@@ -1,0 +1,28 @@
+<h2>Cachegroup Types</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for cachegroup_type <- @cachegroup_types do %>
+    <tr>
+      <td><%= cachegroup_type.name %></td>
+      <td><%= cachegroup_type.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_cachegroup_type_path(@conn, :show, cachegroup_type), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_cachegroup_type_path(@conn, :edit, cachegroup_type), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_cachegroup_type_path(@conn, :delete, cachegroup_type), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New cachegroup type", to: html_cachegroup_type_path(@conn, :new) %>

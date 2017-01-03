@@ -1,8 +1,10 @@
 defmodule Tox.DeliveryService do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :xml_id}
   schema "deliveryservices" do
-    field :xml_id, :string
+    field :xml_id, :string, primary_key: true
     field :active, :boolean, default: false
     field :dscp, :integer
     field :signed, :boolean, default: false
@@ -12,7 +14,7 @@ defmodule Tox.DeliveryService do
     field :dns_bypass_ip6, :string
     field :dns_bypass_ttl, :integer
     field :origin_fqdn, :string
-    field :type, :integer
+    field :type, :string
     field :profile, :integer
     field :cdn_id, :integer
     field :ccr_dns_ttl, :integer

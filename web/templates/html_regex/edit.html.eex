@@ -1,0 +1,6 @@
+<h2>Edit regex</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_regex_path(@conn, :update, @regex) %>
+
+<%= link "Back", to: html_regex_path(@conn, :index) %>

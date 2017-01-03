@@ -51,6 +51,11 @@ defmodule Tox.Router do
     resources "/physicallocations", HtmlPhysicalLocationController
     resources "/regions", HtmlRegionController
     resources "/types", HtmlTypeController
+    resources "/regexes", HtmlRegexController
+    resources "/regex_types", HtmlRegexTypeController
+    resources "/server_types", HtmlServerTypeController
+    resources "/cachegroup_types", HtmlCachegroupTypeController
+    resources "/delivery_service_types", HtmlDeliveryServiceTypeController
   end
 
   # Other scopes may use custom stacks.
@@ -76,5 +81,10 @@ defmodule Tox.Router do
     resources "/physicallocations", PhysicalLocationController, except: [:new, :edit]
     resources "/regions", RegionController, except: [:new, :edit]
     resources "/types", TypeController, except: [:new, :edit]
+    resources "/regexes", RegexController, except: [:new, :edit]
+    resources "/regex_types", RegexTypeController, except: [:new, :edit]
+    resources "/server_types", ServerTypeController, except: [:new, :edit]
+    resources "/cachegroup_types", CachegroupTypeController, except: [:new, :edit]
+    resources "/delivery_service_types", DeliveryServiceTypeController, except: [:new, :edit]
   end
 end

@@ -4,12 +4,12 @@ defmodule Tox.HtmlCdnController do
   alias Tox.Cdn
 
   def index(conn, _params) do
-    cdns = Repo.all(Cdn)
+    cdns = Repo.all(Tox.Cdn)
     render(conn, "index.html", cdns: cdns)
   end
 
   def new(conn, _params) do
-    changeset = Cdn.changeset(%Cdn{})
+    changeset = Tox.Cdn.changeset(%Tox.Cdn{})
     render(conn, "new.html", changeset: changeset)
   end
 

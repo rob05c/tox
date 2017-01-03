@@ -1,0 +1,28 @@
+<h2>Regexes</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Pattern</th>
+      <th>Type</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for regex <- @regexes do %>
+    <tr>
+      <td><%= regex.pattern %></td>
+      <td><%= regex.type %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_regex_path(@conn, :show, regex), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_regex_path(@conn, :edit, regex), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_regex_path(@conn, :delete, regex), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New regex", to: html_regex_path(@conn, :new) %>

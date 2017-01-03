@@ -10,8 +10,7 @@ defmodule Tox.ProfileView do
   end
 
   def render("profile.json", %{profile: profile}) do
-    %{id: profile.id,
-      name: profile.name,
+    %{name: profile.name,
       description: profile.description}
   end
 end

@@ -1,0 +1,6 @@
+<h2>Edit delivery service type</h2>
+
+<%= render "form.html", changeset: @changeset,
+                        action: html_delivery_service_type_path(@conn, :update, @delivery_service_type) %>
+
+<%= link "Back", to: html_delivery_service_type_path(@conn, :index) %>

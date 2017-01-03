@@ -10,9 +10,9 @@ defmodule Tox.ServerView do
   end
 
   def render("server.json", %{server: server}) do
-    %{hostName: server.host_name,
-      domain_name: server.domain_name,
-      tcp_port: server.tcp_port,
+    %{hostName: server.host,
+      domain_name: server.domain,
+      tcp_port: server.port,
       interface_name: server.interface_name,
       interface_mtu: server.interface_mtu,
       ip_address: server.ip_address,

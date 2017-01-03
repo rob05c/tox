@@ -13,7 +13,7 @@
   <tbody>
 <%= for hardware <- @hardwares do %>
     <tr>
-      <td><%= hardware.server %></td>
+      <td><%= hardware.server_host %></td>
       <td><%= hardware.description %></td>
       <td><%= hardware.value %></td>
 

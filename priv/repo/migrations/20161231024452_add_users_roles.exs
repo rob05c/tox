@@ -3,7 +3,7 @@ defmodule Tox.Repo.Migrations.AddUsersRoles do
 
   def change do
     alter table(:users) do
-      add :role, :string
+      add :role, :text
     end
   end
 end

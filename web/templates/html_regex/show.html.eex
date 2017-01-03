@@ -1,0 +1,19 @@
+<h2>Regex</h2>
+
+<ul>
+
+  <li>
+    <strong>Pattern:</strong>
+    <%= @regex.pattern %>
+  </li>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @regex.type %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_regex_path(@conn, :edit, @regex) %>
+
+<%= link "Back", to: html_regex_path(@conn, :index) %>

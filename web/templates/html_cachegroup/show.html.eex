@@ -24,12 +24,12 @@
 
   <li>
     <strong>Parent cachegroup:</strong>
-    <%= @cachegroup.parent_cachegroup_id %>
+    <%= @cachegroup.parent %>
   </li>
 
   <li>
     <strong>Secondary parent cachegroup:</strong>
-    <%= @cachegroup.secondary_parent_cachegroup_id %>
+    <%= @cachegroup.secondary_parent %>
   </li>
 
   <li>

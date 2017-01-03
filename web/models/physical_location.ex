@@ -1,8 +1,10 @@
 defmodule Tox.PhysicalLocation do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :name}
   schema "physicallocations" do
-    field :name, :string
+    field :name, :string, primary_key: true
     field :short_name, :string
     field :address, :string
     field :city, :string
@@ -12,7 +14,7 @@ defmodule Tox.PhysicalLocation do
     field :phone, :string
     field :email, :string
     field :comments, :string
-    field :region, :integer
+    field :region, :string
 
     timestamps()
   end

@@ -1,9 +1,11 @@
 defmodule Tox.Region do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :name}
   schema "regions" do
-    field :name, :string
-    field :division, :integer
+    field :name, :string, primary_key: true
+    field :division, :string
 
     timestamps()
   end

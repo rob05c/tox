@@ -3,8 +3,8 @@ defmodule Tox.Repo.Migrations.CreateDeliveryserviceRegex do
 
   def change do
     create table(:deliveryserviceregexes) do
-      add :deliveryservice, :integer
-      add :regex, :integer
+      add :deliveryservice, references(:deliveryservices, column: :xml_id, type: :text)
+      add :regex, references(:regexes)
       add :set_number, :integer
 
       timestamps()

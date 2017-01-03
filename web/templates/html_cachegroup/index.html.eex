@@ -21,8 +21,8 @@
       <td><%= cachegroup.short_name %></td>
       <td><%= cachegroup.latitude %></td>
       <td><%= cachegroup.longitude %></td>
-      <td><%= cachegroup.parent_cachegroup_id %></td>
-      <td><%= cachegroup.secondary_parent_cachegroup_id %></td>
+      <td><%= cachegroup.parent %></td>
+      <td><%= cachegroup.secondary_parent %></td>
       <td><%= cachegroup.type %></td>
 
       <td class="text-right">

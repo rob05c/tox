@@ -1,9 +1,11 @@
 defmodule Tox.Asn do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :asn}
   schema "asns" do
-    field :asn, :integer
-    field :cachegroup, :integer
+    field :asn, :integer, primary_key: true
+    field :cachegroup, :string
 
     timestamps()
   end

@@ -3,7 +3,7 @@ defmodule Tox.Repo.Migrations.AddDeliveryservicesTenant do
 
   def change do
     alter table(:deliveryservices) do
-      add :tenant, :string
+      add :tenant, :text
     end
   end
 end

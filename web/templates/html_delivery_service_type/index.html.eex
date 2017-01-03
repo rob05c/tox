@@ -1,0 +1,28 @@
+<h2>Delivery Service Types</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for delivery_service_type <- @delivery_service_types do %>
+    <tr>
+      <td><%= delivery_service_type.name %></td>
+      <td><%= delivery_service_type.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_delivery_service_type_path(@conn, :show, delivery_service_type), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_delivery_service_type_path(@conn, :edit, delivery_service_type), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_delivery_service_type_path(@conn, :delete, delivery_service_type), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New delivery_service type", to: html_delivery_service_type_path(@conn, :new) %>

@@ -3,9 +3,8 @@ defmodule Tox.Repo.Migrations.CreateCachegroupParameter do
 
   def change do
     create table(:cachegroupparameters) do
-      add :cachegroup, :integer
-      add :parameter, :integer
-
+      add :cachegroup, references(:cachegroups, column: :name, type: :text)
+      add :parameter, references(:parameters, column: :name, type: :text)
       timestamps()
     end
 

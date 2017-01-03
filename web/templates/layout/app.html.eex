@@ -68,6 +68,10 @@
             <li><a href="/asns">Networks (ASNs)</a></li>
             <li><a href="/hardware">Hardware</a></li>
             <li><a href="/types">Data Types</a></li>
+            <li><a href="/regex_types">Regex Types</a></li>
+            <li><a href="/server_types">Server Types</a></li>
+            <li><a href="/cachegroup_types">Cachegroup Types</a></li>
+            <li><a href="/delivery_service_types">Delivery Service Types</a></li>
             <li><a href="/divisions">Divisions</a></li>
             <li><a href="/regions">Regions</a></li>
             <li><a href="/physicallocations">Physical Locations</a></li>

@@ -3,10 +3,10 @@ defmodule Tox.Repo.Migrations.CreateLog do
 
   def change do
     create table(:logs) do
-      add :level, :string
-      add :message, :string
+      add :level, :text
+      add :message, :text
       add :user, :integer
-      add :ticketnum, :string
+      add :ticketnum, :text
 
       timestamps()
     end

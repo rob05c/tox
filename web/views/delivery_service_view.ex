@@ -10,8 +10,7 @@ defmodule Tox.DeliveryServiceView do
   end
 
   def render("delivery_service.json", %{delivery_service: delivery_service}) do
-    %{id: delivery_service.id,
-      xml_id: delivery_service.xml_id,
+    %{xml_id: delivery_service.xml_id,
       active: delivery_service.active,
       dscp: delivery_service.dscp,
       signed: delivery_service.signed,

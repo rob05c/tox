@@ -1,17 +1,17 @@
 <%= for server <- @servers do %>
       <div class="mui-panel">
         <form class="mui-form--inline">
-          <legend><%= server.host_name %></legend>
+          <legend><%= server.host %></legend>
           <div class="mui-textfield">
-            <input type="text" value="<%= server.host_name %>" readonly="readonly">
+            <input type="text" value="<%= server.host %>" readonly="readonly">
             <label>Host</label>
           </div>
           <div class="mui-textfield">
-            <input type="text" value="<%= server.domain_name %>" readonly="readonly">
+            <input type="text" value="<%= server.domain %>" readonly="readonly">
             <label>Domain</label>
           </div>
           <div class="mui-textfield">
-            <input type="number" min="0" max="65535" value="<%= server.tcp_port %>" readonly="readonly">
+            <input type="number" min="0" max="65535" value="<%= server.port %>" readonly="readonly">
             <label>Port</label>
           </div>
           <div class="mui-textfield">

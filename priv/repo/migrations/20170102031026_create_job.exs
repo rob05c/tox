@@ -4,12 +4,12 @@ defmodule Tox.Repo.Migrations.CreateJob do
   def change do
     create table(:jobs) do
       add :agent, :integer
-      add :object_type, :string
-      add :object_name, :string
-      add :keyword, :string
-      add :parameters, :string
-      add :asset_url, :string
-      add :asset_type, :string
+      add :object_type, :text
+      add :object_name, :text
+      add :keyword, :text
+      add :parameters, :text
+      add :asset_url, :text
+      add :asset_type, :text
       add :status, :integer
       add :start_time, :datetime
       add :entered_time, :datetime

@@ -10,8 +10,7 @@ defmodule Tox.CdnView do
   end
 
   def render("cdn.json", %{cdn: cdn}) do
-    %{id: cdn.id,
-      name: cdn.name,
+    %{name: cdn.name,
       dnssec_enabled: cdn.dnssec_enabled}
   end
 end

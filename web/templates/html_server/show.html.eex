@@ -3,18 +3,18 @@
 <ul>
 
   <li>
-    <strong>Host name:</strong>
-    <%= @server.host_name %>
+    <strong>Host:</strong>
+    <%= @server.host %>
   </li>
 
   <li>
-    <strong>Domain name:</strong>
-    <%= @server.domain_name %>
+    <strong>Domain:</strong>
+    <%= @server.domain %>
   </li>
 
   <li>
-    <strong>Tcp port:</strong>
-    <%= @server.tcp_port %>
+    <strong>Port:</strong>
+    <%= @server.port %>
   </li>
 
   <li>
@@ -145,11 +145,6 @@
   <li>
     <strong>Router port name:</strong>
     <%= @server.router_port_name %>
-  </li>
-
-  <li>
-    <strong>Last updated:</strong>
-    <%= @server.last_updated %>
   </li>
 
 </ul>

@@ -1,8 +1,10 @@
 defmodule Tox.Division do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :name}
   schema "divisions" do
-    field :name, :string
+    field :name, :string, primary_key: true
 
     timestamps()
   end

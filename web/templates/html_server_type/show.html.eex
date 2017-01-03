@@ -1,0 +1,24 @@
+<h2>Server Type</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @server_type.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @server_type.description %>
+  </li>
+
+  <li>
+    <strong>Use in table:</strong>
+    <%= @server_type.use_in_table %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_server_type_path(@conn, :edit, @server_type) %>
+
+<%= link "Back", to: html_server_type_path(@conn, :index) %>

@@ -1,8 +1,10 @@
 defmodule Tox.Cdn do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :name}
   schema "cdns" do
-    field :name, :string
+    field :name, :string, primary_key: true
     field :dnssec_enabled, :boolean, default: false
 
     timestamps()

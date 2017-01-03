@@ -3,7 +3,7 @@ defmodule Tox.DeliveryserviceServer do
 
   schema "deliveryserviceservers" do
     field :deliveryservice, :integer
-    field :server, :integer
+    field :server_host, :integer
 
     timestamps()
   end
@@ -13,7 +13,7 @@ defmodule Tox.DeliveryserviceServer do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:deliveryservice, :server])
-    |> validate_required([:deliveryservice, :server])
+    |> cast(params, [:deliveryservice, :server_host])
+    |> validate_required([:deliveryservice, :server_host])
   end
 end

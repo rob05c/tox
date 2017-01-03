@@ -67,7 +67,7 @@
 
   <div class="form-group">
     <%= label f, :region, class: "control-label" %>
-    <%= number_input f, :region, class: "form-control" %>
+    <%= text_input f, :region, class: "form-control" %>
     <%= error_tag f, :region %>
   </div>
 

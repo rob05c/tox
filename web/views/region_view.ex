@@ -10,8 +10,7 @@ defmodule Tox.RegionView do
   end
 
   def render("region.json", %{region: region}) do
-    %{id: region.id,
-      name: region.name,
+    %{name: region.name,
       division: region.division}
   end
 end

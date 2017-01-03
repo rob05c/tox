@@ -10,8 +10,7 @@ defmodule Tox.PhysicalLocationView do
   end
 
   def render("physical_location.json", %{physical_location: physical_location}) do
-    %{id: physical_location.id,
-      name: physical_location.name,
+    %{name: physical_location.name,
       short_name: physical_location.short_name,
       address: physical_location.address,
       city: physical_location.city,

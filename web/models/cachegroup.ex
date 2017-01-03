@@ -1,14 +1,16 @@
 defmodule Tox.Cachegroup do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :name}
   schema "cachegroups" do
-    field :name, :string
+    field :name, :string, primary_key: true
     field :short_name, :string
     field :latitude, :float
     field :longitude, :float
-    field :parent_cachegroup_id, :integer
-    field :secondary_parent_cachegroup_id, :integer
-    field :type, :integer
+    field :parent, :integer
+    field :secondary_parent, :integer
+    field :type, :string
 
     timestamps()
   end
@@ -18,7 +20,7 @@ defmodule Tox.Cachegroup do
   """
   def changeset(struct, params \\ %{}) do
     struct
-    |> cast(params, [:name, :short_name, :latitude, :longitude, :parent_cachegroup_id, :secondary_parent_cachegroup_id, :type])
+    |> cast(params, [:name, :short_name, :latitude, :longitude, :parent, :secondary_parent, :type])
     |> validate_required([:name, :short_name, :type])
   end
 end

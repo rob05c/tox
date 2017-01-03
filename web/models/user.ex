@@ -1,8 +1,10 @@
 defmodule Tox.User do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :email}
   schema "users" do
-    field :email, :string
+    field :email, :string, primary_key: true
     field :password, :string, virtual: true
     field :password_hash, :string
     field :role, :string

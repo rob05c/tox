@@ -13,7 +13,7 @@
 
   <div class="form-group">
     <%= label f, :division, class: "control-label" %>
-    <%= number_input f, :division, class: "form-control" %>
+    <%= text_input f, :division, class: "form-control" %>
     <%= error_tag f, :division %>
   </div>
 

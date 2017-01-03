@@ -13,7 +13,7 @@
 
   <div class="form-group">
     <%= label f, :cachegroup, class: "control-label" %>
-    <%= number_input f, :cachegroup, class: "form-control" %>
+    <%= text_input f, :cachegroup, class: "form-control" %>
     <%= error_tag f, :cachegroup %>
   </div>
 

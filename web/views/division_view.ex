@@ -10,7 +10,6 @@ defmodule Tox.DivisionView do
   end
 
   def render("division.json", %{division: division}) do
-    %{id: division.id,
-      name: division.name}
+    %{name: division.name}
   end
 end

@@ -1,0 +1,24 @@
+<h2>Cachegroup Type</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @cachegroup_type.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @cachegroup_type.description %>
+  </li>
+
+  <li>
+    <strong>Use in table:</strong>
+    <%= @cachegroup_type.use_in_table %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_cachegroup_type_path(@conn, :edit, @cachegroup_type) %>
+
+<%= link "Back", to: html_cachegroup_type_path(@conn, :index) %>

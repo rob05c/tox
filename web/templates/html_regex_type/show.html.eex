@@ -1,0 +1,24 @@
+<h2>Regex Type</h2>
+
+<ul>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @regex_type.name %>
+  </li>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @regex_type.description %>
+  </li>
+
+  <li>
+    <strong>Use in table:</strong>
+    <%= @regex_type.use_in_table %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: html_regex_type_path(@conn, :edit, @regex_type) %>
+
+<%= link "Back", to: html_regex_type_path(@conn, :index) %>

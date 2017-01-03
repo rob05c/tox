@@ -6,21 +6,21 @@
   <% end %>
 
   <div class="form-group">
-    <%= label f, :host_name, class: "control-label" %>
-    <%= text_input f, :host_name, class: "form-control" %>
-    <%= error_tag f, :host_name %>
+    <%= label f, :host, class: "control-label" %>
+    <%= text_input f, :host, class: "form-control" %>
+    <%= error_tag f, :host %>
   </div>
 
   <div class="form-group">
-    <%= label f, :domain_name, class: "control-label" %>
-    <%= text_input f, :domain_name, class: "form-control" %>
-    <%= error_tag f, :domain_name %>
+    <%= label f, :domain, class: "control-label" %>
+    <%= text_input f, :domain, class: "form-control" %>
+    <%= error_tag f, :domain %>
   </div>
 
   <div class="form-group">
-    <%= label f, :tcp_port, class: "control-label" %>
-    <%= number_input f, :tcp_port, class: "form-control" %>
-    <%= error_tag f, :tcp_port %>
+    <%= label f, :port, class: "control-label" %>
+    <%= number_input f, :port, class: "form-control" %>
+    <%= error_tag f, :port %>
   </div>
 
   <div class="form-group">
@@ -79,7 +79,7 @@
 
   <div class="form-group">
     <%= label f, :physical_location, class: "control-label" %>
-    <%= number_input f, :physical_location, class: "form-control" %>
+    <%= text_input f, :physical_location, class: "form-control" %>
     <%= error_tag f, :physical_location %>
   </div>
 
@@ -91,13 +91,13 @@
 
   <div class="form-group">
     <%= label f, :cachegroup, class: "control-label" %>
-    <%= number_input f, :cachegroup, class: "form-control" %>
+    <%= text_input f, :cachegroup, class: "form-control" %>
     <%= error_tag f, :cachegroup %>
   </div>
 
   <div class="form-group">
     <%= label f, :type, class: "control-label" %>
-    <%= number_input f, :type, class: "form-control" %>
+    <%= text_input f, :type, class: "form-control" %>
     <%= error_tag f, :type %>
   </div>
 
@@ -109,13 +109,13 @@
 
   <div class="form-group">
     <%= label f, :profile, class: "control-label" %>
-    <%= number_input f, :profile, class: "form-control" %>
+    <%= text_input f, :profile, class: "form-control" %>
     <%= error_tag f, :profile %>
   </div>
 
   <div class="form-group">
     <%= label f, :cdn, class: "control-label" %>
-    <%= number_input f, :cdn, class: "form-control" %>
+    <%= text_input f, :cdn, class: "form-control" %>
     <%= error_tag f, :cdn %>
   </div>
 
@@ -177,12 +177,6 @@
     <%= label f, :router_port_name, class: "control-label" %>
     <%= text_input f, :router_port_name, class: "form-control" %>
     <%= error_tag f, :router_port_name %>
-  </div>
-
-  <div class="form-group">
-    <%= label f, :last_updated, class: "control-label" %>
-    <%= datetime_select f, :last_updated, class: "form-control" %>
-    <%= error_tag f, :last_updated %>
   </div>
 
   <div class="form-group">

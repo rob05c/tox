@@ -3,7 +3,7 @@ defmodule Tox.Repo.Migrations.AddUsersTenant do
 
   def change do
     alter table(:users) do
-      add :tenant, :string
+      add :tenant, :text
     end
   end
 end

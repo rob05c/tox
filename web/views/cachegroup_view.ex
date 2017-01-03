@@ -10,13 +10,12 @@ defmodule Tox.CachegroupView do
   end
 
   def render("cachegroup.json", %{cachegroup: cachegroup}) do
-    %{id: cachegroup.id,
-      name: cachegroup.name,
+    %{name: cachegroup.name,
       short_name: cachegroup.short_name,
       latitude: cachegroup.latitude,
       longitude: cachegroup.longitude,
-      parent_cachegroup_id: cachegroup.parent_cachegroup_id,
-      secondary_parent_cachegroup_id: cachegroup.secondary_parent_cachegroup_id,
+      parent: cachegroup.parent,
+      secondary_parent: cachegroup.secondary_parent,
       type: cachegroup.type}
   end
 end

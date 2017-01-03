@@ -1,0 +1,28 @@
+<h2>Server Types</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for server_type <- @server_types do %>
+    <tr>
+      <td><%= server_type.name %></td>
+      <td><%= server_type.description %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: html_server_type_path(@conn, :show, server_type), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: html_server_type_path(@conn, :edit, server_type), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: html_server_type_path(@conn, :delete, server_type), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New server type", to: html_server_type_path(@conn, :new) %>

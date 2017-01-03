@@ -29,8 +29,8 @@ defmodule Tox.ProfileController do
     render(conn, "show.json", profile: profile)
   end
 
-  def update(conn, %{"id" => id, "profile" => profile_params}) do
-    profile = Repo.get!(Profile, id)
+  def update(conn, %{"name" => name, "profile" => profile_params}) do
+    profile = Repo.get!(Profile, name)
     changeset = Profile.changeset(profile, profile_params)
 
     case Repo.update(changeset) do
@@ -43,8 +43,8 @@ defmodule Tox.ProfileController do
     end
   end
 
-  def delete(conn, %{"id" => id}) do
-    profile = Repo.get!(Profile, id)
+  def delete(conn, %{"name" => name}) do
+    profile = Repo.get!(Profile, name)
 
     # Here we use delete! (with a bang) because we expect
     # it to always work (and if it does not, it will raise).

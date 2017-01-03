@@ -10,8 +10,7 @@ defmodule Tox.AsnView do
   end
 
   def render("asn.json", %{asn: asn}) do
-    %{id: asn.id,
-      asn: asn.asn,
+    %{asn: asn.asn,
       cachegroup: asn.cachegroup}
   end
 end

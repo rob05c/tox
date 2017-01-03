@@ -12,6 +12,6 @@ defmodule Tox.DeliveryserviceServerView do
   def render("deliveryservice_server.json", %{deliveryservice_server: deliveryservice_server}) do
     %{id: deliveryservice_server.id,
       deliveryservice: deliveryservice_server.deliveryservice,
-      server: deliveryservice_server.server}
+      server_host: deliveryservice_server.server_host}
   end
 end

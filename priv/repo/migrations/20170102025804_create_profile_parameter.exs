@@ -3,9 +3,8 @@ defmodule Tox.Repo.Migrations.CreateProfileParameter do
 
   def change do
     create table(:profileparameters) do
-      add :profile, :integer
-      add :parameter, :integer
-
+      add :profile, references(:profiles, column: :name, type: :text)
+      add :parameter, references(:parameters, column: :name, type: :text)
       timestamps()
     end
 

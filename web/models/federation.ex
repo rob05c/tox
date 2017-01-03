@@ -1,8 +1,10 @@
 defmodule Tox.Federation do
   use Tox.Web, :model
 
+  @primary_key false
+  @derive {Phoenix.Param, key: :cname}
   schema "federations" do
-    field :cname, :string
+    field :cname, :string, primary_key: true
     field :description, :string
     field :ttl, :string
 
